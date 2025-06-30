@@ -1,3 +1,27 @@
+/* Stylish footer links */
+.stylish-footer {
+  background: transparent;
+}
+.footer-link {
+  color: #8f94fb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  padding: 0.5em 1.2em;
+  border-radius: 2em;
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
+  box-shadow: 0 2px 8px rgba(79, 84, 255, 0.12);
+  margin: 0 0.2em;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  display: inline-block;
+}
+.footer-link:hover, .footer-link:focus {
+  background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%);
+  color: #fff;
+  text-decoration: none;
+  box-shadow: 0 4px 16px rgba(143, 148, 251, 0.25);
+}
 body {
   background-color: #181a1b;
   color: #f1f3f4;
