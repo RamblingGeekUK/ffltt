@@ -82,7 +82,6 @@ app.get("/api/latest-videos", async (req, res) => {
 
     for (const channel of channels) {
       if (channel.ad) {
-        // AD entry: push as a special video object
         results.push({
           channel: channel.name,
           ad: true,
