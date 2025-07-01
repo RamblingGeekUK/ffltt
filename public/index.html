@@ -14,7 +14,27 @@
   <footer class="text-center py-4 mt-5 stylish-footer">
     <p>This site is not affiliated with Linus Media Group in any way!</p>
     <p>All videos are the property of their respective owners.</p>
-    <a href="faq.html" target="_parent" class="footer-link ms-4">FAQ</a>
+    <a href="#" id="openFaq" class="footer-link ms-4">FAQ</a>
+  <div id="faqSlide" class="faq-slide-panel">
+    <iframe src="faq.html" frameborder="0" class="faq-iframe"></iframe>
+    <button id="closeFaq" class="btn btn-secondary btn-sm close-faq-btn">Close</button>
+  </div>
   <script src="script.js"></script>
+  <script>
+    const faqPanel = document.getElementById('faqSlide');
+    const openFaq = document.getElementById('openFaq');
+    const closeFaq = document.getElementById('closeFaq');
+    openFaq.addEventListener('click', function(e) {
+      e.preventDefault();
+      faqPanel.classList.add('open');
+    });
+    closeFaq.addEventListener('click', function() {
+      faqPanel.classList.remove('open');
+    });
+    // Optional: close on ESC
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') faqPanel.classList.remove('open');
+    });
+  </script>
 </body>
 </html>

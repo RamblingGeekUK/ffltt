@@ -1,6 +1,7 @@
+
 require("dotenv").config();
 const express = require("express");
-// Use built-in fetch (Node.js v18+)
+const nodemailer = require('nodemailer');
 const fs = require("fs");
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -8,6 +9,32 @@ const PORT = process.env.PORT || 3000;
 const YT_API_KEY = process.env.YOUTUBE_API_KEY;
 
 app.use(express.static("public"));
+
+app.post('/api/contact', express.json(), async (req, res) => {
+  const { email, message } = req.body;
+  if (!email || !message) return res.status(400).json({ error: 'Missing fields' });
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.CONTACT_EMAIL_USER,
+      pass: process.env.CONTACT_EMAIL_PASS
+    }
+  });
+
+  try {
+    await transporter.sendMail({
+      from: email,
+      to: process.env.CONTACT_EMAIL_USER,
+      subject: 'Contact Form Submission',
+      text: message
+    });
+    res.json({ success: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: 'Failed to send email' });
+  }
+});
 
 app.get("/api/latest-videos", async (req, res) => {
   const CACHE_FILE = "latestVideos.json";
