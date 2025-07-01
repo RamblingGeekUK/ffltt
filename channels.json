@@ -6,5 +6,11 @@
   { "channelId": "UCFy9hgi7oH9pFBE4BwJMKRw", "name": "Emily Young" },
   { "channelId": "UCL81YHgzH8tcrFfOJJwlSQw", "name": "LinusCatTips" },
   { "channelId": "UCrhOy1ro4mJ9cO8LwSG4X5w", "name": "BERKEL" },
-  { "channelId": "UCx_HOMKJL72cRUjlBtLZfYw", "name": "SuopOnYoutube" }
+  { "channelId": "UCx_HOMKJL72cRUjlBtLZfYw", "name": "SuopOnYoutube" },
+  {
+    "ad": true,
+    "name": "LTT Store",
+    "image": "LTT_Logo.webp",
+    "website": "https://LTTStore.com"
+  }
 ]

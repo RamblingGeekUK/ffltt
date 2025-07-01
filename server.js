@@ -31,6 +31,18 @@ app.get("/api/latest-videos", async (req, res) => {
     const results = [];
 
     for (const channel of channels) {
+      if (channel.ad) {
+        // AD entry: push as a special video object
+        results.push({
+          channel: channel.name,
+          ad: true,
+          title: null,
+          videoId: null,
+          thumbnail: channel.image,
+          website: channel.website
+        });
+        continue;
+      }
       const apiUrl = `https://www.googleapis.com/youtube/v3/search?key=${YT_API_KEY}&channelId=${channel.channelId}&order=date&part=snippet&type=video&maxResults=1`;
       console.log('Fetching:', apiUrl);
       const response = await fetch(apiUrl);

@@ -40,5 +40,19 @@
     "title": "Bike adventures at Seymour with Dez",
     "videoId": "x33PFTQPVwc",
     "thumbnail": "https://i.ytimg.com/vi/x33PFTQPVwc/hqdefault.jpg"
+  },
+  {
+    "channel": "SuopOnYoutube",
+    "title": "I Built My ULTIMATE Stream Room 2025! (it&#39;s also an art studio!)",
+    "videoId": "c7rzMl0UBTU",
+    "thumbnail": "https://i.ytimg.com/vi/c7rzMl0UBTU/hqdefault.jpg"
+  },
+  {
+    "channel": "LTT Store",
+    "ad": true,
+    "title": null,
+    "videoId": null,
+    "thumbnail": "LTT_Logo.webp",
+    "website": "https://LTTStore.com"
   }
 ]
