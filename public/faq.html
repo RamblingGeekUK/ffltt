@@ -6,6 +6,7 @@
     <title>FAQ - LTT Alumni Videos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 
 <body>
@@ -77,7 +78,7 @@
                     data-bs-parent="#faqAccordion">
                     <div class="accordion-body bg-dark text-white"
                         style="border-top:1px solid #444; font-size:1rem;">
-                        Yes! Please you the contract form below.
+                        Yes! Please use the contract form below.
                     </div>
                 </div>
             </div>
@@ -107,14 +108,25 @@
           <div class="card bg-dark text-light border-secondary shadow-sm">
             <div class="card-body">
               <h2 class="card-title text-info text-center mb-3" style="font-size:1.3rem;">Make a suggestion</h2>
-              <form>
+              <form id="contactForm">
                 <div class="mb-3">
-                  <label for="contactEmail" class="form-label">Email address</label>
-                  <input type="email" class="form-control bg-dark text-light border-secondary" id="contactEmail" placeholder="your@email.com" required>
+                  <label for="contactChannel" class="form-label">YouTube Channel</label>
+                  <textarea class="form-control bg-dark text-light border-secondary" id="contactChannel" rows="1" placeholder="Link" required></textarea>
+                </div>
+                 <div class="mb-3">
+                  <label for="contactTwitter" class="form-label">Twitter/X</label>
+                  <textarea class="form-control bg-dark text-light border-secondary" id="contactTwitter" rows="1" placeholder="Link"></textarea>
                 </div>
                 <div class="mb-3">
-                  <label for="contactMessage" class="form-label">Message</label>
-                  <textarea class="form-control bg-dark text-light border-secondary" id="contactMessage" rows="4" placeholder="Your message..." required></textarea>
+                  <label for="contactInstagram" class="form-label">Instagram</label>
+                  <textarea class="form-control bg-dark text-light border-secondary" id="contactInstagram" rows="1" placeholder="Link"></textarea>
+                </div>
+                <div class="mb-3">
+                  <label for="contactBlueSky" class="form-label">BlueSky</label>
+                  <textarea class="form-control bg-dark text-light border-secondary" id="contactBlueSky" rows="1" placeholder="Link"></textarea>
+                </div>
+                <div class="mb-3">
+                  <div class="cf-turnstile" data-sitekey="0x4AAAAAABjHxyEH5Nv-3ngv"></div>
                 </div>
                 <div class="d-grid">
                   <button type="submit" class="btn btn-primary">Send</button>
@@ -132,13 +144,22 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       // Backend-enabled contact form handler
-      document.querySelector('form')?.addEventListener('submit', function(e) {
+      document.getElementById('contactForm')?.addEventListener('submit', async function(e) {
         e.preventDefault();
-        const email = document.getElementById('contactEmail').value.trim();
-        const message = document.getElementById('contactMessage').value.trim();
+        const youtube = document.getElementById('contactChannel')?.value.trim();
+        const twitter = document.getElementById('contactTwitter')?.value.trim() || '';
+        const instagram = document.getElementById('contactInstagram')?.value.trim() || '';
+        const bluesky = document.getElementById('contactBlueSky')?.value.trim() || '';
         const status = document.getElementById('contactStatus');
-        if (!email || !message) {
-          status.textContent = 'Please fill out all fields.';
+        const turnstileToken = document.querySelector('input[name=cf-turnstile-response]')?.value;
+        if (!youtube) {
+          status.textContent = 'Please provide the YouTube channel link.';
+          status.style.display = 'block';
+          status.style.color = '#ff6b6b';
+          return;
+        }
+        if (!turnstileToken) {
+          status.textContent = 'Please complete the CAPTCHA.';
           status.style.display = 'block';
           status.style.color = '#ff6b6b';
           return;
@@ -146,7 +167,7 @@
         fetch('/api/contact', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email, message })
+          body: JSON.stringify({ youtube, twitter, instagram, bluesky, turnstileToken })
         })
         .then(res => res.json())
         .then(data => {
@@ -154,6 +175,7 @@
             status.textContent = 'Thank you for your message!';
             status.style.color = '#8f94fb';
             this.reset();
+            if (window.turnstile) window.turnstile.reset();
           } else {
             status.textContent = 'Failed to send. Try again later.';
             status.style.color = '#ff6b6b';

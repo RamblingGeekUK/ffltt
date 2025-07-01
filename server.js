@@ -1,4 +1,3 @@
-
 require("dotenv").config();
 const express = require("express");
 const nodemailer = require('nodemailer');
@@ -11,8 +10,26 @@ const YT_API_KEY = process.env.YOUTUBE_API_KEY;
 app.use(express.static("public"));
 
 app.post('/api/contact', express.json(), async (req, res) => {
-  const { email, message } = req.body;
-  if (!email || !message) return res.status(400).json({ error: 'Missing fields' });
+  const { youtube, twitter, instagram, bluesky, turnstileToken } = req.body;
+  if (!youtube) return res.status(400).json({ error: 'Missing YouTube channel' });
+  // Cloudflare Turnstile verification
+  if (!turnstileToken) return res.status(400).json({ error: 'Missing CAPTCHA' });
+  try {
+    const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        secret: process.env.CLOUDFLARE_TURNSTILE_SECRET,
+        response: turnstileToken
+      })
+    });
+    const verifyData = await verifyRes.json();
+    if (!verifyData.success) {
+      return res.status(400).json({ error: 'CAPTCHA failed' });
+    }
+  } catch (e) {
+    return res.status(500).json({ error: 'CAPTCHA verification error' });
+  }
 
   const transporter = nodemailer.createTransport({
     service: 'gmail',
@@ -22,12 +39,18 @@ app.post('/api/contact', express.json(), async (req, res) => {
     }
   });
 
+  // Compose email body
+  let text = `YouTube Channel: ${youtube}\n`;
+  if (twitter) text += `Twitter/X: ${twitter}\n`;
+  if (instagram) text += `Instagram: ${instagram}\n`;
+  if (bluesky) text += `BlueSky: ${bluesky}\n`;
+
   try {
     await transporter.sendMail({
-      from: email,
+      from: process.env.CONTACT_EMAIL_USER,
       to: process.env.CONTACT_EMAIL_USER,
       subject: 'Contact Form Submission',
-      text: message
+      text
     });
     res.json({ success: true });
   } catch (err) {
@@ -84,7 +107,8 @@ app.get("/api/latest-videos", async (req, res) => {
           channel: channel.name,
           title: video.snippet.title,
           videoId: video.id.videoId,
-          thumbnail: video.snippet.thumbnails.high.url
+          thumbnail: video.snippet.thumbnails.high.url,
+          socials: channel.socials || {}
         });
       }
     }

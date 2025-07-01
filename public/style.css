@@ -1,3 +1,34 @@
+/* FAQ Accordion Chevron Color Customization */
+.accordion-button::after {
+  filter: none !important;
+  background-image: none !important;
+  content: '';
+  display: inline-block;
+  width: 1.25em;
+  height: 1.25em;
+  margin-left: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: transform 0.2s, filter 0.2s;
+  mask-image: url('data:image/svg+xml;utf8,<svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.646 5.646a.5.5 0 0 1 .708 0L8 11.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>');
+  background-color: #adb5bd; /* fallback */
+}
+
+.accordion-button.text-info::after {
+  background-color: #8f94fb; /* matches text-info */
+}
+.accordion-button.text-light::after {
+  background-color: #f1f3f4; /* matches text-light */
+}
+.accordion-button.collapsed::after {
+  transform: rotate(-90deg);
+  background-color: #f1f3f4; /* closed = text-light */
+}
+.accordion-button:not(.collapsed)::after {
+  transform: rotate(0deg);
+  background-color: #8f94fb; /* open = text-info */
+}
 /* FAQ Slide-in Panel */
 .faq-slide-panel {
   position: fixed;
