@@ -70,16 +70,6 @@
     }
   },
   {
-    "channelId": "UCx_HOMKJL72cRUjlBtLZfYw",
-    "name": "SuopOnYoutube",
-    "socials": {
-      "twitter": { "url": "https://twitter.com/placeholder", "visible": false },
-      "bluesky": { "url": "https://bsky.app/profile/placeholder", "visible": false },
-      "instagram": { "url": "https://instagram.com/placeholder", "visible": false },
-      "youtube": { "url": "https://youtube.com/channel/UCx_HOMKJL72cRUjlBtLZfYw", "visible": true }
-    }
-  },
-  {
     "ad": true,
     "name": "LTT Store",
     "image": "LTT_Logo.webp",
