@@ -56,16 +56,6 @@
     }
   },
   {
-    "channelId": "UCL81YHgzH8tcrFfOJJwlSQw",
-    "name": "LinusCatTips",
-    "socials": {
-      "twitter": { "url": "", "visible": false },
-      "bluesky": { "url": "", "visible": false },
-      "instagram": { "url": "", "visible": false },
-      "youtube": { "url": "https://youtube.com/channel/UCL81YHgzH8tcrFfOJJwlSQw", "visible": true }
-    }
-  },
-  {
     "channelId": "UCrhOy1ro4mJ9cO8LwSG4X5w",
     "name": "BERKEL",
     "socials": {
@@ -75,11 +65,84 @@
       "youtube": { "url": "https://youtube.com/channel/UCrhOy1ro4mJ9cO8LwSG4X5w", "visible": true }
     }
   },
+  {
+    "channelId": "UCNRfCcFmW92f5QcnELfJ7OA",
+    "name": "Dub MFG",
+    "socials": {
+      "twitter": { "url": "", "visible": false },
+      "bluesky": { "url": "", "visible": false },
+      "instagram": { "url": "", "visible": false },
+      "youtube": { "url": "https://www.youtube.com/@dubmfg", "visible": true }
+    }
+  },
+  {
+    "channelId": "UCLVSzpfyiXdnmOOyXXSvqUw",
+    "name": "Tanner McCoolman",
+    "socials": {
+      "twitter": { "url": "", "visible": false },
+      "bluesky": { "url": "", "visible": false },
+      "instagram": { "url": "", "visible": false },
+      "youtube": { "url": "http://www.youtube.com/@tannermccoolman4647", "visible": true }
+    }
+  },
+  {
+    "channelId": "UCAWWkWfhFGu69sHaOMbdLPw",
+    "name": "Sexy Little Fat Boy aka Jessica Pigeau",
+    "socials": {
+      "twitter": { "url": "", "visible": false },
+      "bluesky": { "url": "", "visible": false },
+      "instagram": { "url": "", "visible": false },
+      "youtube": { "url": "http://www.youtube.com/@SexyLittleFatBoy1", "visible": true }
+    }
+  },
+  {
+    "channelId": "UC_Esn95ND5RtkDCfp1_B0ww",
+    "name": "Jessica Pigeau",
+    "socials": {
+      "twitter": { "url": "", "visible": false },
+      "bluesky": { "url": "", "visible": false },
+      "instagram": { "url": "", "visible": false },
+      "youtube": { "url": "http://www.youtube.com/@SexyLittleFatBoy", "visible": true }
+    }
+  },
+  {
+    "channelId": "UCNRTNlalcpFEfEXaJa8GMUA",
+    "name": "Kacboy (Marcus Blackstock)",
+    "socials": {
+      "twitter": { "url": "", "visible": false },
+      "bluesky": { "url": "bsky.app/profile/kacboy.com", "visible": true },
+      "instagram": { "url": "", "visible": false },
+      "youtube": { "url": "https://www.youtube.com/@kacboy", "visible": true }
+    }
+  },
+  {
+  "channelId": "UCKXq_PkhZfWKE91seN7-X5A",
+  "name": "Marcus Blackstock",
+  "socials": {
+    "twitter": { "url": "", "visible": false },
+    "bluesky": { "url": "bsky.app/profile/kacboy.com", "visible": true },
+    "instagram": { "url": "", "visible": false },
+    "youtube": { "url": "http://www.youtube.com/@MarcusBlackstock", "visible": true }
+    }
+  },
+  {
+  "channelId": "UCmM7wKR1pcwLGvJneyx4JHQ",
+  "name": "Hanna Luu",
+  "socials": {
+    "twitter": { "url": "", "visible": false },
+    "bluesky": { "url": "", "visible": false },
+    "instagram": { "url": "", "visible": false },
+    "youtube": { "url": "http://www.youtube.com/@pokefesterJr", "visible": true }
+    }
+  },
    {
-    "ad": true,
-    "name": "LTT Store",
-    "image": "LTT_Logo.webp",
-    "website": "https://LTTStore.com"
+  "channelId": "UCE28vO93E6QB7V03ij7xAXA",
+  "name": "'Silent' Colin",
+  "socials": {
+    "twitter": { "url": "", "visible": false },
+    "bluesky": { "url": "", "visible": false },
+    "instagram": { "url": "", "visible": false },
+    "youtube": { "url": "http://www.youtube.com/@colindegraafmedia", "visible": true }
+    }
   }
-
 ]

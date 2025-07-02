@@ -2,205 +2,207 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>FAQ - LTT Alumni Videos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+  <meta charset="UTF-8">
+  <title>FAQ - LTT Alumni Videos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 </head>
 
 <body>
-    
-    <div class="container py-5">
-        <h1 class="mb-3 text-center" style="text-shadow: 0 0 12px #8f94fb, 0 0 20px #8f94fb;">
-            Frequently Asked Questions
-        </h1>        
-        <div class="accordion accordion-dark" id="faqAccordion">
-            <div class="accordion-item bg-dark text-light border-secondary">
-                <h2 class="accordion-header" id="faq1-heading">
-                    <button class="accordion-button bg-dark text-info fw-bold shadow-sm" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1"
-                        style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
-                        What is this site?
-                    </button>
-                </h2>
-                <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body bg-dark text-white"
-                        style="border-top:1px solid #444; font-size:1rem;">
-                        This site helps you find the latest videos from creators who previously worked at Linus Tech
-                        Tips (LTT).
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item bg-dark text-light border-secondary">
-                <h2 class="accordion-header" id="faq2-heading">
-                    <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2"
-                        style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
-                        Where does the video data come from?
-                    </button>
-                </h2>
-                <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body bg-dark text-white"
-                        style="border-top:1px solid #444; font-size:1rem;">
-                        The site uses the YouTube API to fetch the latest videos from a curated list of LTT alumni
-                        channels.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item bg-dark text-light border-secondary">
-                <h2 class="accordion-header" id="faq3-heading">
-                    <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3"
-                        style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
-                        How often is the data updated?
-                    </button>
-                </h2>
-                <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body bg-dark text-white"
-                        style="border-top:1px solid #444; font-size:1rem;">
-                        The video list is refreshed once per day to reduce API usage and improve performance.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item bg-dark text-light border-secondary">
-                <h2 class="accordion-header" id="faq4-heading">
-                    <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4"
-                        style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
-                        Can I suggest a new channel?
-                    </button>
-                </h2>
-                <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body bg-dark text-white"
-                        style="border-top:1px solid #444; font-size:1rem;">
-                        Yes! Please use the form below.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item bg-dark text-light border-secondary">
-                <h2 class="accordion-header" id="faq5-heading">
-                    <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5"
-                        style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
-                        I can't send a message it's asking to complete the CAPTCHA, nothing to complete?
-                    </button>
-                </h2>
-                <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq4-heading"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body bg-dark text-white"
-                        style="border-top:1px solid #444; font-size:1rem;">
-                        Refresh, it should work, the site is using Cloudflare's Turnstile, Invisible challenge that does not require interaction.
-                    </div>
-                </div>
-            </div>
 
-            <div class="accordion-item bg-dark text-light border-secondary">
-                <h2 class="accordion-header" id="faq6-heading">
-                    <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6"
-                        style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
-                        Why are people missing?
-                    </button>
-                </h2>
-                <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6-heading"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body bg-dark text-white"
-                        style="border-top:1px solid #444; font-size:1rem;">
-                        If you think someone is missing see FAQ 4, otherwise they are still working at LTT.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item bg-dark text-light border-secondary">
-                <h2 class="accordion-header" id="faq7-heading">
-                    <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button"
-                        data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7"
-                        style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
-                        Wait you have Ad's, are you making money from this?
-                    </button>
-                </h2>
-                <div id="faq7" class="accordion-collapse collapse" aria-labelledby="faq7-heading"
-                    data-bs-parent="#faqAccordion">
-                    <div class="accordion-body bg-dark text-white"
-                        style="border-top:1px solid #444; font-size:1rem;">
-                        The AD "block" was added partly as a joke—think LTTStore.com—and partly to help fill out the page. The site doesn’t make any money; it’s just a fun project… unless, of course, you do want to buy an ad block.</div>
-                    </div>
-                </div>
-            </div>
+  <div class="container py-5">
+    <h1 class="mb-3 text-center" style="text-shadow: 0 0 12px #8f94fb, 0 0 20px #8f94fb;">
+      Frequently Asked Questions
+    </h1>
+    <div class="accordion accordion-dark" id="faqAccordion">
+      <div class="accordion-item bg-dark text-light border-secondary">
+        <h2 class="accordion-header" id="faq1-heading">
+          <button class="accordion-button bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1"
+            style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
+            What is this site?
+          </button>
+        </h2>
+        <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">
+            This site helps you find the latest videos from creators who previously worked at Linus Tech
+            Tips (LTT).
+          </div>
         </div>
+      </div>
+      <div class="accordion-item bg-dark text-light border-secondary">
+        <h2 class="accordion-header" id="faq2-heading">
+          <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button"
+            data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2"
+            style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
+            Where does the video data come from?
+          </button>
+        </h2>
+        <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">
+            The site uses the YouTube API to fetch the latest videos from a curated list of LTT alumni
+            channels.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-light border-secondary">
+        <h2 class="accordion-header" id="faq3-heading">
+          <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button"
+            data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3"
+            style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
+            How often is the data updated?
+          </button>
+        </h2>
+        <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">
+            The video list is refreshed once per day to reduce API usage and improve performance.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-light border-secondary">
+        <h2 class="accordion-header" id="faq4-heading">
+          <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button"
+            data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4"
+            style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
+            Can I suggest a new channel?
+          </button>
+        </h2>
+        <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">
+            Yes! Please use the form below.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-light border-secondary">
+        <h2 class="accordion-header" id="faq5-heading">
+          <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button"
+            data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5"
+            style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
+            I can't send a message it's asking to complete the CAPTCHA, nothing to complete?
+          </button>
+        </h2>
+        <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq4-heading"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">
+            Refresh, it should work, the site is using Cloudflare's Turnstile, Invisible challenge that does not require
+            interaction.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-light border-secondary">
+        <h2 class="accordion-header" id="faq6-heading">
+          <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button"
+            data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6"
+            style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
+            Why are people missing?
+          </button>
+        </h2>
+        <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6-heading"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">
+            If you think someone is missing see FAQ 4, otherwise they are still working at LTT.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item bg-dark text-light border-secondary">
+        <h2 class="accordion-header" id="faq7-heading">
+          <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button"
+            data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7"
+            style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">
+            Wait you have Ad's, are you making money from this?
+          </button>
+        </h2>
+        <div id="faq7" class="accordion-collapse collapse" aria-labelledby="faq7-heading"
+          data-bs-parent="#faqAccordion">
+          <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">
+            The AD "card" was added partly as a joke—think LTTStore.com—and partly to help fill out the page. The site
+            doesn’t make any money; it’s just a fun project… unless, of course, you do want to buy an ad block.</div>
+        </div>
+      </div>
+      
+        
+        </div>
+      </div>
     </div>
-    
-    <div class="container mb-5">
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
-          <div class="card bg-dark text-light border-secondary shadow-sm">
-            <div class="card-body">
-              <h2 class="card-title text-info text-center mb-3" style="font-size:1.3rem;">Make a suggestion</h2>
-              <form id="contactForm">
-                <div class="mb-3">
-                  <label for="contactChannel" class="form-label">YouTube Channel</label>
-                  <textarea class="form-control bg-dark text-light border-secondary" id="contactChannel" rows="1" placeholder="Link" required></textarea>
-                </div>
-                 <div class="mb-3">
-                  <label for="contactTwitter" class="form-label">Twitter/X</label>
-                  <textarea class="form-control bg-dark text-light border-secondary" id="contactTwitter" rows="1" placeholder="Link"></textarea>
-                </div>
-                <div class="mb-3">
-                  <label for="contactInstagram" class="form-label">Instagram</label>
-                  <textarea class="form-control bg-dark text-light border-secondary" id="contactInstagram" rows="1" placeholder="Link"></textarea>
-                </div>
-                <div class="mb-3">
-                  <label for="contactBlueSky" class="form-label">BlueSky</label>
-                  <textarea class="form-control bg-dark text-light border-secondary" id="contactBlueSky" rows="1" placeholder="Link"></textarea>
-                </div>
-                <div class="mb-3">
-                  <div class="cf-turnstile" data-sitekey="0x4AAAAAABjHxyEH5Nv-3ngv"></div>
-                </div>
-                <div class="d-grid">
-                  <button type="submit" class="btn btn-primary">Send</button>
-                </div>
-                <div id="contactStatus" class="mt-3 text-center" style="display:none;"></div>
-              </form>
-            </div>
+  </div>
+  </div>
+
+  <div class="container mb-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card bg-dark text-light border-secondary shadow-sm">
+          <div class="card-body">
+            <h2 class="card-title text-info text-center mb-3" style="font-size:1.3rem;">Make a suggestion</h2>
+            <form id="contactForm">
+              <div class="mb-3">
+                <label for="contactChannel" class="form-label">YouTube Channel</label>
+                <textarea class="form-control bg-dark text-light border-secondary" id="contactChannel" rows="1"
+                  placeholder="Link" required></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="contactTwitter" class="form-label">Twitter/X</label>
+                <textarea class="form-control bg-dark text-light border-secondary" id="contactTwitter" rows="1"
+                  placeholder="Link"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="contactInstagram" class="form-label">Instagram</label>
+                <textarea class="form-control bg-dark text-light border-secondary" id="contactInstagram" rows="1"
+                  placeholder="Link"></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="contactBlueSky" class="form-label">BlueSky</label>
+                <textarea class="form-control bg-dark text-light border-secondary" id="contactBlueSky" rows="1"
+                  placeholder="Link"></textarea>
+              </div>
+              <div class="mb-3">
+                <div class="cf-turnstile" data-sitekey="0x4AAAAAABjHxyEH5Nv-3ngv"></div>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn gradient-btn">Send</button>
+              </div>
+              <div id="contactStatus" class="mt-3 text-center" style="display:none;"></div>
+            </form>
           </div>
         </div>
       </div>
     </div>
-    <div class="text-center mt-5">
-        <a href="#" id="closeSliderBtn" class="btn btn-primary mb-4">Close</a>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      // Backend-enabled contact form handler
-      document.getElementById('contactForm')?.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        const youtube = document.getElementById('contactChannel')?.value.trim();
-        const twitter = document.getElementById('contactTwitter')?.value.trim() || '';
-        const instagram = document.getElementById('contactInstagram')?.value.trim() || '';
-        const bluesky = document.getElementById('contactBlueSky')?.value.trim() || '';
-        const status = document.getElementById('contactStatus');
-        const turnstileToken = document.querySelector('input[name=cf-turnstile-response]')?.value;
-        if (!youtube) {
-          status.textContent = 'Please provide the YouTube channel link.';
-          status.style.display = 'block';
-          status.style.color = '#ff6b6b';
-          return;
-        }
-        if (!turnstileToken) {
-          status.textContent = 'Please complete the CAPTCHA.';
-          status.style.display = 'block';
-          status.style.color = '#ff6b6b';
-          return;
-        }
-        fetch('/api/contact', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ youtube, twitter, instagram, bluesky, turnstileToken })
-        })
+  </div>
+  <div class="text-center mt-5">
+    <a href="#" id="closeSliderBtn" class="btn btn-primary mb-4">Close</a>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Backend-enabled contact form handler
+    document.getElementById('contactForm')?.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const youtube = document.getElementById('contactChannel')?.value.trim();
+      const twitter = document.getElementById('contactTwitter')?.value.trim() || '';
+      const instagram = document.getElementById('contactInstagram')?.value.trim() || '';
+      const bluesky = document.getElementById('contactBlueSky')?.value.trim() || '';
+      const status = document.getElementById('contactStatus');
+      const turnstileToken = document.querySelector('input[name=cf-turnstile-response]')?.value;
+      if (!youtube) {
+        status.textContent = 'Please provide the YouTube channel link.';
+        status.style.display = 'block';
+        status.style.color = '#ff6b6b';
+        return;
+      }
+      if (!turnstileToken) {
+        status.textContent = 'Please complete the CAPTCHA.';
+        status.style.display = 'block';
+        status.style.color = '#ff6b6b';
+        return;
+      }
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ youtube, twitter, instagram, bluesky, turnstileToken })
+      })
         .then(res => res.json())
         .then(data => {
           if (data.success) {
@@ -219,20 +221,20 @@
           status.style.color = '#ff6b6b';
           status.style.display = 'block';
         });
-      });
-    </script>
-    <script>
-      // If loaded in a slider iframe, close the slider on back button click
-      document.getElementById('closeSliderBtn')?.addEventListener('click', function(e) {
-        e.preventDefault();
-        if (window.parent !== window && window.parent.document) {
-          const slider = window.parent.document.getElementById('faqSlide');
-          if (slider) slider.classList.remove('open');
-        } else {
-          window.location.href = 'index.html';
-        }
-      });
-    </script>
+    });
+  </script>
+  <script>
+    // If loaded in a slider iframe, close the slider on back button click
+    document.getElementById('closeSliderBtn')?.addEventListener('click', function (e) {
+      e.preventDefault();
+      if (window.parent !== window && window.parent.document) {
+        const slider = window.parent.document.getElementById('faqSlide');
+        if (slider) slider.classList.remove('open');
+      } else {
+        window.location.href = 'index.html';
+      }
+    });
+  </script>
 </body>
 
 </html>

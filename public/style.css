@@ -1,3 +1,46 @@
+/* Dark mode for nav-tabs */
+.nav-tabs {
+  background: #23272a;
+  border-bottom: 1px solid #444;
+  border-radius: 1rem 1rem 0 0;
+}
+.nav-tabs .nav-link {
+  color: #8f94fb;
+  background: transparent;
+  border: none;
+  border-radius: 0.5rem 0.5rem 0 0;
+  margin-right: 0.25rem;
+  font-weight: 600;
+  transition: background 0.2s, color 0.2s;
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-link:focus {
+  background: #181a1b;
+  color: #fff;
+  border: none;
+  box-shadow: 0 2px 8px rgba(143, 148, 251, 0.10);
+}
+.nav-tabs .nav-link:hover {
+  background: #23272a;
+  color: #fff;
+}
+/* Gradient button for forms (white text, purple gradient) */
+.gradient-btn {
+  background: linear-gradient(90deg, #8f94fb 0%, #4e54c8 100%);
+  color: #fff !important;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(79, 84, 200, 0.10);
+  transition: background 0.2s, box-shadow 0.2s, transform 0.1s;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.1rem;
+}
+/* .gradient-btn:hover, .gradient-btn:focus {  Removed mouseover effect for feedback modal */
+/*  background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%); */
+/*  color: #fff; */
+/*  box-shadow: 0 4px 16px rgba(79, 84, 200, 0.18); */
+/*  transform: translateY(-2px) scale(1.03); */
+/* } */
 /* FAQ Accordion Chevron Color Customization */
 .accordion-button::after {
   filter: none !important;
@@ -49,13 +92,37 @@
 .faq-slide-panel.open {
   right: 0;
 }
+/* FAQ Slide Panel - right side */
+.faq-slide-panel.faq-slide-right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 600px;
+  max-width: 100vw;
+  height: 100vh;
+  background: #181a1b;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.4);
+  z-index: 2000;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.faq-slide-panel.faq-slide-right.open {
+  transform: translateX(0);
+}
 .faq-iframe {
   flex: 1 1 auto;
   width: 100%;
   border: none;
-  background: #181a1b;
+  background: transparent;
 }
 .close-faq-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
   border-radius: 0 0 0 1.5rem;
   margin: 0;
   border: none;
@@ -70,6 +137,51 @@
   transition: background 0.2s, color 0.2s;
 }
 .close-faq-btn:hover {
+  background: #4e54c8;
+  color: #fff;
+}
+/* Contact Slide Panel - right side (fixed, matches FAQ) */
+.contact-slide-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 600px;
+  max-width: 100vw;
+  height: 100vh;
+  background: #181a1b;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.4);
+  z-index: 2000;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+.contact-slide-panel.open {
+  transform: translateX(0);
+}
+.contact-iframe {
+  flex: 1 1 auto;
+  width: 100%;
+  border: none;
+  background: transparent;
+}
+.close-contact-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+  border-radius: 0 0 0 1.5rem;
+  margin: 0;
+  border: none;
+  background: #23272a;
+  color: #f1f3f4;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 0.5em 1.2em;
+  transition: background 0.2s, color 0.2s;
+}
+.close-contact-btn:hover {
   background: #4e54c8;
   color: #fff;
 }
@@ -136,3 +248,30 @@ h1, h3 {
   background: #444950;
   border-radius: 4px;
 }
+
+/* Video grid: always 3 across on desktop */
+#videoGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+#videoGrid .col-lg-4 {
+  flex: 0 0 calc(33.333% - 1rem);
+  max-width: calc(33.333% - 1rem);
+  margin-bottom: 1rem;
+  display: flex;
+}
+#videoGrid .card {
+  width: 100%;
+}
+@media (max-width: 991px) {
+  #videoGrid .col-lg-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+  #videoGrid {
+    gap: 1rem;
+  }
+}
+
