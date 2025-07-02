@@ -1,3 +1,16 @@
+
+require("dotenv").config();
+const express = require("express");
+const nodemailer = require('nodemailer');
+const fs = require("fs");
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+const YT_API_KEY = process.env.YOUTUBE_API_KEY;
+
+app.use(express.static("public"));
+
+// --- Submit Creator Endpoint ---
 app.post('/api/submit-creator', express.json(), async (req, res) => {
   const { name, youtube, twitter, instagram, bluesky, turnstileToken } = req.body;
   if (!name || !youtube) return res.status(400).json({ error: 'Missing required fields' });
@@ -48,14 +61,10 @@ app.post('/api/submit-creator', express.json(), async (req, res) => {
     res.status(500).json({ error: 'Failed to send email' });
   }
 });
-require("dotenv").config();
-const express = require("express");
-const nodemailer = require('nodemailer');
-const fs = require("fs");
-const app = express();
-const PORT = process.env.PORT || 3000;
 
-const YT_API_KEY = process.env.YOUTUBE_API_KEY;
+
+
+
 
 app.use(express.static("public"));
 
