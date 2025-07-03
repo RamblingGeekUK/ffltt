@@ -144,5 +144,11 @@
     "instagram": { "url": "", "visible": false },
     "youtube": { "url": "http://www.youtube.com/@colindegraafmedia", "visible": true }
     }
+  },
+   {
+    "ad": true,
+    "name": "Floatplane",
+    "image": "fp.png",
+    "website": "https://www.floatplane.com/"
   }
 ]
