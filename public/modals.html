@@ -1,0 +1,174 @@
+<!-- FAQ Modal (accordion style) -->
+<div class="modal fade" id="faqModal" tabindex="-1" aria-labelledby="faqModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header border-secondary">
+        <h5 class="modal-title" id="faqModalLabel" style="text-shadow: 0 0 12px #8f94fb, 0 0 20px #8f94fb;">Frequently Asked Questions</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="accordion accordion-dark" id="faqAccordion">
+          <div class="accordion-item bg-dark text-light border-secondary">
+            <h2 class="accordion-header" id="faq1-heading">
+              <button class="accordion-button bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">What is this site?</button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
+              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">This site helps you find the latest videos from creators who previously worked at Linus Tech Tips (LTT).</div>
+            </div>
+          </div>
+          <div class="accordion-item bg-dark text-light border-secondary">
+            <h2 class="accordion-header" id="faq2-heading">
+              <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">Where does the video data come from?</button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse" aria-labelledby="faq2-heading" data-bs-parent="#faqAccordion">
+              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">The site uses the YouTube API to fetch the latest videos from a curated list of LTT alumni channels.</div>
+            </div>
+          </div>
+          <div class="accordion-item bg-dark text-light border-secondary">
+            <h2 class="accordion-header" id="faq3-heading">
+              <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">How often is the data updated?</button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
+              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">The video list is refreshed once per week (people don't leave that often, thankfully) to reduce API usage and improve performance.</div>
+            </div>
+          </div>
+          <div class="accordion-item bg-dark text-light border-secondary">
+            <h2 class="accordion-header" id="faq4-heading">
+              <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">Can I suggest a new channel?</button>
+            </h2>
+            <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
+              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">Yes! Click feedback, to erm, provide feedback.</div>
+            </div>
+          </div>
+          <div class="accordion-item bg-dark text-light border-secondary">
+            <h2 class="accordion-header" id="faq5-heading">
+              <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">I can't send a message?</button>
+            </h2>
+            <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq5-heading" data-bs-parent="#faqAccordion">
+              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">Refresh, it should work, the site is using Cloudflare's Turnstile. I'm still figuring it out.</div>
+            </div>
+          </div>
+          <div class="accordion-item bg-dark text-light border-secondary">
+            <h2 class="accordion-header" id="faq6-heading">
+              <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">Why are people missing?</button>
+            </h2>
+            <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6-heading" data-bs-parent="#faqAccordion">
+              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">If you think someone is missing see FAQ 4, otherwise they are still working at LTT.</div>
+            </div>
+          </div>
+          <div class="accordion-item bg-dark text-light border-secondary">
+            <h2 class="accordion-header" id="faq7-heading">
+              <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">Wait you have Ad's, are you making money from this?</button>
+            </h2>
+            <div id="faq7" class="accordion-collapse collapse" aria-labelledby="faq7-heading" data-bs-parent="#faqAccordion">
+              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">The AD "card" was added partly as a joke—think LTTStore.com—and partly to help fill out the page. The site doesn’t make any money; it’s just a fun project… unless, of course, you do want to buy an AD card fire me a message via Feedback.</div>
+            </div>
+          </div>
+          <div class="accordion-item bg-dark text-light border-secondary">
+          <h2 class="accordion-header" id="faq8-heading">
+            <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">Why are they displayed in a random order?</button>
+          </h2>
+          <div id="faq8" class="accordion-collapse collapse" aria-labelledby="faq8-heading" data-bs-parent="#faqAccordion">
+            <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">To try and make sure all creators are seen and no one creator is singled out.</div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Feedback Modal (tabbed: Contact & Suggest Creator) -->
+<div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-light">
+      <div class="modal-header border-secondary">
+        <h5 class="modal-title" id="feedbackModalLabel" style="text-shadow: 0 0 12px #8f94fb, 0 0 20px #8f94fb;">Provide Feedback</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Feedback Modal Tabs -->
+        <ul class="nav nav-tabs mb-4" id="modalFeedbackTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="modal-contact-tab" data-bs-toggle="tab" data-bs-target="#modal-contact" type="button" role="tab" aria-controls="modal-contact" aria-selected="true">Contact</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="modal-creator-tab" data-bs-toggle="tab" data-bs-target="#modal-creator" type="button" role="tab" aria-controls="modal-creator" aria-selected="false">Suggest Creator</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="modalFeedbackTabContent">
+          <div class="tab-pane fade show active" id="modal-contact" role="tabpanel" aria-labelledby="modal-contact-tab">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-lg-6">
+                <div class="card bg-dark text-light border-secondary shadow-sm">
+                  <div class="card-body">
+                    <form id="modalContactForm">
+                      <div class="mb-3">
+                        <label for="modalName" class="form-label">Name</label>
+                        <input type="text" class="form-control bg-dark text-light border-secondary" id="modalName" placeholder="Your Name">
+                      </div>
+                      <div class="mb-3">
+                        <label for="modalEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control bg-dark text-light border-secondary" id="modalEmail" placeholder="Your Email">
+                      </div>
+                      <div class="mb-3">
+                        <label for="modalMessage" class="form-label">Message</label>
+                        <textarea class="form-control bg-dark text-light border-secondary" id="modalMessage" rows="8.5" placeholder="Your Message"></textarea>
+                      </div>
+                      <div class="d-grid">
+                        <button type="submit" class="btn gradient-btn">Send</button>
+                      </div>
+                      <div class="mb-3" style="margin: 20px;">
+                        <div class="cf-turnstile" data-sitekey="0x4AAAAAABjHxyEH5Nv-3ngv"></div>
+                      </div>
+                      <div id="modalContactStatus" class="mt-3 text-center" style="display:none;"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-pane fade" id="modal-creator" role="tabpanel" aria-labelledby="modal-creator-tab">
+            <div class="row justify-content-center">
+              <div class="col-md-8 col-lg-6">
+                <div class="card bg-dark text-light border-secondary shadow-sm">
+                  <div class="card-body">
+                    <form id="modalCreatorForm">
+                      <div class="mb-3">
+                        <label for="creatorName" class="form-label">Creator Name</label>
+                        <input type="text" class="form-control bg-dark text-light border-secondary" id="creatorName" placeholder="Creator Name" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="creatorYoutube" class="form-label">YouTube Channel Link</label>
+                        <input type="url" class="form-control bg-dark text-light border-secondary" id="creatorYoutube" placeholder="YouTube Channel URL" required>
+                      </div>
+                      <div class="mb-3">
+                        <label for="creatorTwitter" class="form-label">Twitter/X</label>
+                        <input type="url" class="form-control bg-dark text-light border-secondary" id="creatorTwitter" placeholder="Twitter/X URL">
+                      </div>
+                      <div class="mb-3">
+                        <label for="creatorInstagram" class="form-label">Instagram</label>
+                        <input type="url" class="form-control bg-dark text-light border-secondary" id="creatorInstagram" placeholder="Instagram URL">
+                      </div>
+                      <div class="mb-3">
+                        <label for="creatorBluesky" class="form-label">BlueSky</label>
+                        <input type="url" class="form-control bg-dark text-light border-secondary" id="creatorBluesky" placeholder="BlueSky URL">
+                      </div>
+                      <div class="d-grid">
+                        <button type="submit" class="btn gradient-btn">Submit Creator</button>
+                      </div>
+                      <div class="mb-3" style="margin: 20px;">
+                        <div class="cf-turnstile" data-sitekey="0x4AAAAAABjHxyEH5Nv-3ngv"></div>
+                      </div>
+                      <div id="modalCreatorStatus" class="mt-3 text-center" style="display:none; margin: 1rem;"></div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+[
+  {
+    "channelId": "UCBur6ZOAqhjRs9PadDArozQ",
+    "name": "BocaBola (Elijah)",
+    "title": null,
+    "videoId": null,
+    "thumbnail": null,
+    "socials": {
+      "youtube": { "url": "http://www.youtube.com/@BocaBola_", "visible": true },
+      "twitter": { "url": "", "visible": false },
+      "instagram": { "url": "", "visible": false },
+      "bluesky": { "url": "", "visible": false }
+    }
+  },
+  {
+    "channelId": "UCAV3WZWnCvL0l5DzF6ogc1w",
+    "name": "BuhDan (Dan)",
+    "title": null,
+    "videoId": null,
+    "thumbnail": null,
+    "socials": {
+      "youtube": { "url": "http://www.youtube.com/@buhdan", "visible": true },
+      "twitter": { "url": "", "visible": false },
+      "instagram": { "url": "", "visible": false },
+      "bluesky": { "url": "", "visible": false },
+      "soundcloud": { "url": "https://soundcloud.com/buhdan", "visible": true }
+    }
+  },
+  {
+    "channelId": "UCAV3WZWnCvL0l5DzF6ogc1w",
+    "name": "CatTips",
+    "title": null,
+    "videoId": null,
+    "thumbnail": null,
+    "socials": {
+      "youtube": { "url": "http://www.youtube.com/@LinusCatTips", "visible": true },
+      "twitter": { "url": "", "visible": false },
+      "instagram": { "url": "", "visible": false },
+      "bluesky": { "url": "", "visible": false },
+      "soundcloud": { "url": "https://soundcloud.com/buhdan", "visible": false }
+    }
+  }
+]

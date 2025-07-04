@@ -1,3 +1,8 @@
+/* Add glow effect to active navbar item for consistency with headers */
+.navbar-nav .nav-link.active {
+  color: #8f94fb !important;
+  text-shadow: 0 0 12px #8f94fb, 0 0 20px #8f94fb;
+}
 /* Dark mode for nav-tabs */
 .nav-tabs {
   background: #23272a;

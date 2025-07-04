@@ -4,6 +4,7 @@
     "name": "Zip Tie Tuning",
     "socials": {
       "twitter": { "url": "https://x.com/AlexTheGreatish", "visible": true },
+      "website": { "url" : "","visible": true},
       "bluesky": { "url": "", "visible": false },
       "instagram": { "url": "https://www.instagram.com/alexthegreatish", "visible": true },
       "youtube": { "url": "https://youtube.com/channel/UCWqW23Ko6dbscptZYyQE-8A", "visible": true }
@@ -14,6 +15,7 @@
     "name": "Taran Van Hemert",
     "socials": {
       "twitter": { "url": "https://x.com/taranvh", "visible": true },
+      "website": { "url" : "","visible": true},
       "bluesky": { "url": "", "visible": false },
       "instagram": { "url": "", "visible": false },
       "youtube": { "url": "https://youtube.com/channel/UCd0ZD4iCXRXf18p3cA7EQfg", "visible": true }
@@ -24,6 +26,7 @@
     "name": "Taran Van Hemert 2",
     "socials": {
       "twitter": { "url": "https://x.com/taranvh", "visible": true },
+      "website": { "url" : "","visible": true},
       "bluesky": { "url": "", "visible": false },
       "instagram": { "url": "", "visible": false },
       "youtube": { "url": "https://youtube.com/channel/UCkTnIE2RohNA1eV4v-nov7A", "visible": true }
@@ -34,6 +37,7 @@
     "name": "Brandon Y Lee",
     "socials": {
       "twitter": { "url": "https://twitter.com/Brandon_Y_Lee", "visible": true },
+      "website": { "url" : "","visible": true},
       "bluesky": { "url": "", "visible": false },
       "instagram": { "url": "https://instagram.com/brandon_y_lee", "visible": true },
       "youtube": { "url": "https://youtube.com/channel/UC-WpvHaSBQEAztK6n_CupOg", "visible": true }
@@ -50,16 +54,19 @@
     "name": "Emily Young",
     "socials": {
       "twitter": { "url": "https://x.com/emilyayoung1", "visible": true },
+      "website": { "url" : "","visible": true},
       "bluesky": { "url": "https://bsky.app/profile/placeholder", "visible": false },
       "instagram": { "url": "https://instagram.com/placeholder", "visible": false },
-      "youtube": { "url": "https://youtube.com/channel/UCFy9hgi7oH9pFBE4BwJMKRw", "visible": true }
+      "youtube": { "url": "https://youtube.com/channel/UCFy9hgi7oH9pFBE4BwJMKRw", "visible": true },
+      "fediverse": { "url": "https://tech.lgbt/@emilyyoung", "visible": true }
     }
   },
   {
     "channelId": "UCrhOy1ro4mJ9cO8LwSG4X5w",
-    "name": "BERKEL",
+    "name": "Nick Van Berkel ",
     "socials": {
       "twitter": { "url": "https://x.com/NEILVANBEIL", "visible": true },
+      "website": { "url" : "","visible": true},
       "bluesky": { "url": "", "visible": false },
       "instagram": { "url": "https://www.instagram.com/nickvanberkel", "visible": true },
       "youtube": { "url": "https://youtube.com/channel/UCrhOy1ro4mJ9cO8LwSG4X5w", "visible": true }
@@ -70,9 +77,11 @@
     "name": "Dub MFG",
     "socials": {
       "twitter": { "url": "", "visible": false },
+      "website": { "url" : "https://www.dubmfg.com/","visible": true},
       "bluesky": { "url": "", "visible": false },
-      "instagram": { "url": "", "visible": false },
-      "youtube": { "url": "https://www.youtube.com/@dubmfg", "visible": true }
+      "instagram": { "url": "https://www.instagram.com/dubmfg", "visible": false },
+      "youtube": { "url": "https://www.youtube.com/@dubmfg", "visible": true },
+      "etsy": { "url": "https://www.etsy.com/ca/shop/DubMFG", "visible": true }
     }
   },
   {
@@ -80,6 +89,7 @@
     "name": "Tanner McCoolman",
     "socials": {
       "twitter": { "url": "", "visible": false },
+      "website": { "url" : "","visible": true},
       "bluesky": { "url": "", "visible": false },
       "instagram": { "url": "", "visible": false },
       "youtube": { "url": "http://www.youtube.com/@tannermccoolman4647", "visible": true }
@@ -90,6 +100,7 @@
     "name": "Sexy Little Fat Boy aka Jessica Pigeau",
     "socials": {
       "twitter": { "url": "", "visible": false },
+      "website": { "url" : "","visible": true},
       "bluesky": { "url": "", "visible": false },
       "instagram": { "url": "", "visible": false },
       "youtube": { "url": "http://www.youtube.com/@SexyLittleFatBoy1", "visible": true }
@@ -100,6 +111,7 @@
     "name": "Jessica Pigeau",
     "socials": {
       "twitter": { "url": "", "visible": false },
+      "website": { "url" : "","visible": true},
       "bluesky": { "url": "", "visible": false },
       "instagram": { "url": "", "visible": false },
       "youtube": { "url": "http://www.youtube.com/@SexyLittleFatBoy", "visible": true }
@@ -110,9 +122,11 @@
     "name": "Kacboy (Marcus Blackstock)",
     "socials": {
       "twitter": { "url": "", "visible": false },
+      "website": { "url" : "kacboy.com","visible": true},
       "bluesky": { "url": "bsky.app/profile/kacboy.com", "visible": true },
       "instagram": { "url": "", "visible": false },
-      "youtube": { "url": "https://www.youtube.com/@kacboy", "visible": true }
+      "youtube": { "url": "https://www.youtube.com/@kacboy", "visible": true },
+      "ko-fi": { "url": "https://ko-fi.com/kacboy", "visible": true }
     }
   },
   {
@@ -120,6 +134,7 @@
   "name": "Marcus Blackstock",
   "socials": {
     "twitter": { "url": "", "visible": false },
+    "website": { "url" : "","visible": true},
     "bluesky": { "url": "bsky.app/profile/kacboy.com", "visible": true },
     "instagram": { "url": "", "visible": false },
     "youtube": { "url": "http://www.youtube.com/@MarcusBlackstock", "visible": true }
@@ -130,6 +145,7 @@
   "name": "Hanna Luu",
   "socials": {
     "twitter": { "url": "", "visible": false },
+    "website": { "url" : "","visible": true},
     "bluesky": { "url": "", "visible": false },
     "instagram": { "url": "", "visible": false },
     "youtube": { "url": "http://www.youtube.com/@pokefesterJr", "visible": true }
@@ -140,6 +156,7 @@
   "name": "'Silent' Colin",
   "socials": {
     "twitter": { "url": "", "visible": false },
+    "website": { "url" : "","visible": true},
     "bluesky": { "url": "", "visible": false },
     "instagram": { "url": "", "visible": false },
     "youtube": { "url": "http://www.youtube.com/@colindegraafmedia", "visible": true }
