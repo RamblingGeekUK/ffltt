@@ -53,6 +53,8 @@
       .then(res => res.text())
       .then(html => {
         document.getElementById('shared-modals').innerHTML = html;
+        // Dispatch event so modals.js can re-render Turnstile
+        document.dispatchEvent(new Event('modalsLoaded'));
       });
   </script>
   <script src="modals.js"></script>

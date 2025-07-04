@@ -1,7 +1,23 @@
 // Shared modal logic for FAQ and Feedback
 // Assumes Bootstrap 5 and Cloudflare Turnstile are loaded
 
+// Ensure Turnstile script is loaded in <head> in your HTML:
+// <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+
+function renderTurnstiles() {
+  if (window.turnstile && document.querySelectorAll('.cf-turnstile').length) {
+    document.querySelectorAll('.cf-turnstile').forEach(el => {
+      if (!el.hasAttribute('data-rendered')) {
+        window.turnstile.render(el, { sitekey: el.getAttribute('data-sitekey') });
+        el.setAttribute('data-rendered', 'true');
+      }
+    });
+  }
+}
+
+// Re-render Turnstile widgets after modals are injected
 document.addEventListener('DOMContentLoaded', function () {
+  renderTurnstiles();
   // Feedback form validation and submission
   const feedbackForm = document.getElementById('feedbackForm');
   if (feedbackForm) {
@@ -43,3 +59,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 });
+
+// Also re-render Turnstile widgets after modals are dynamically loaded
+document.addEventListener('modalsLoaded', renderTurnstiles);
