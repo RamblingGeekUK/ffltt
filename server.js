@@ -1,4 +1,3 @@
-
 require("dotenv").config();
 const express = require("express");
 const nodemailer = require('nodemailer');
@@ -62,9 +61,23 @@ app.post('/api/submit-creator', express.json(), async (req, res) => {
   }
 });
 
-
-
-
+// Cache info endpoint for frontend footer
+app.get('/api/cache-info', (req, res) => {
+  const CACHE_FILE = 'latestVideos.json';
+  const CACHE_TTL = 7 * 24 * 60 * 60; // 7 days in seconds
+  try {
+    if (!fs.existsSync(CACHE_FILE)) {
+      return res.json({ lastUpdated: null, ttl: CACHE_TTL });
+    }
+    const stats = fs.statSync(CACHE_FILE);
+    return res.json({
+      lastUpdated: stats.mtime,
+      ttl: CACHE_TTL
+    });
+  } catch (e) {
+    return res.status(500).json({ lastUpdated: null, ttl: CACHE_TTL });
+  }
+});
 
 app.use(express.static("public"));
 
@@ -120,10 +133,11 @@ app.post('/api/contact', express.json(), async (req, res) => {
 
 app.get("/api/latest-videos", async (req, res) => {
   const CACHE_FILE = "latestVideos.json";
-  const CACHE_TTL = 24 * 60 * 60 * 1000; // 24 hours in ms
+  const CACHE_TTL = 7 * 24 * 60 * 60 * 1000; // 7 days in ms (once a week)
   try {
     let useCache = false;
-    if (fs.existsSync(CACHE_FILE)) {
+    let cacheExists = fs.existsSync(CACHE_FILE);
+    if (cacheExists) {
       const stats = fs.statSync(CACHE_FILE);
       const age = Date.now() - stats.mtimeMs;
       if (age < CACHE_TTL) {
@@ -131,15 +145,26 @@ app.get("/api/latest-videos", async (req, res) => {
       }
     }
 
+    // Fallback: use static cache if present and no cache file exists
+    if (!cacheExists && fs.existsSync('static-latestVideos.json')) {
+      const fallback = JSON.parse(fs.readFileSync('static-latestVideos.json'));
+      const shuffled = fallback.slice().sort(() => Math.random() - 0.5);
+      return res.json(shuffled);
+    }
+
     if (useCache) {
       const cached = JSON.parse(fs.readFileSync(CACHE_FILE));
-      return res.json(cached);
+      // Shuffle cached results before sending
+      const shuffled = cached.slice().sort(() => Math.random() - 0.5);
+      return res.json(shuffled);
     }
 
     const channels = JSON.parse(fs.readFileSync("channels.json"));
     const results = [];
 
-    for (const channel of channels) {
+    // Shuffle channels array for random order
+    const shuffledChannels = channels.slice().sort(() => Math.random() - 0.5);
+    for (const channel of shuffledChannels) {
       if (channel.ad) {
         results.push({
           channel: channel.name,
