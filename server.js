@@ -10,66 +10,6 @@ const YT_API_KEY = process.env.YOUTUBE_API_KEY;
 app.use(express.static("public"));
 app.use('/data', express.static('data'));
 
-// Branching Out videos endpoint
-app.get("/api/branching-out-videos", async (req, res) => {
-  const CACHE_FILE = "data/branchingOutVideos.json";
-  const CACHE_TTL = 7 * 24 * 60 * 60 * 1000; // 7 days in ms
-  try {
-    let useCache = false;
-    let cacheExists = fs.existsSync(CACHE_FILE);
-    if (cacheExists) {
-      const stats = fs.statSync(CACHE_FILE);
-      const age = Date.now() - stats.mtimeMs;
-      if (age < CACHE_TTL) {
-        useCache = true;
-      }
-    }
-
-    if (useCache) {
-      const cached = JSON.parse(fs.readFileSync(CACHE_FILE));
-      return res.json(cached);
-    }
-
-    const channels = JSON.parse(fs.readFileSync("data/channels.json"));
-    const results = [];
-    for (const channel of channels) {
-      if (channel.ad) {
-        results.push({
-          channel: channel.name,
-          ad: true,
-          title: null,
-          videoId: null,
-          thumbnail: channel.image,
-          website: channel.website
-        });
-        continue;
-      }
-      const apiUrl = `https://www.googleapis.com/youtube/v3/search?key=${YT_API_KEY}&channelId=${channel.channelId}&order=date&part=snippet&type=video&maxResults=1`;
-      console.log('Fetching (Branching Out):', apiUrl);
-      const response = await fetch(apiUrl);
-      const data = await response.json();
-      if (data.error) {
-        console.error('YouTube API error:', data.error);
-      }
-      const video = data.items?.[0];
-      if (video) {
-        results.push({
-          channel: channel.name,
-          title: video.snippet.title,
-          videoId: video.id.videoId,
-          thumbnail: video.snippet.thumbnails.high.url,
-          socials: channel.socials || {}
-        });
-      }
-    }
-    fs.writeFileSync(CACHE_FILE, JSON.stringify(results, null, 2));
-    res.json(results);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Failed to fetch Branching Out videos" });
-  }
-});
-
 // --- Submit Creator Endpoint ---
 app.post('/api/submit-creator', express.json(), async (req, res) => {
   const { name, youtube, twitter, instagram, bluesky, turnstileToken } = req.body;
@@ -194,15 +134,15 @@ app.post('/api/contact', express.json(), async (req, res) => {
 });
 
 app.get("/api/latest-videos", async (req, res) => {
-  const CACHE_FILE = "latestVideos.json";
-  const CACHE_TTL = 48 * 60 * 60; // 48 hours in seconds; // 7 days in ms (once a week)
+  const CACHE_FILE = "data/latestVideos.json";
+  const CACHE_TTL = 48 * 60 * 60; // 48 hours in seconds
   try {
     let useCache = false;
     let cacheExists = fs.existsSync(CACHE_FILE);
     if (cacheExists) {
       const stats = fs.statSync(CACHE_FILE);
       const age = Date.now() - stats.mtimeMs;
-      if (age < CACHE_TTL) {
+      if (age < CACHE_TTL * 1000) {
         useCache = true;
       }
     }
@@ -223,10 +163,16 @@ app.get("/api/latest-videos", async (req, res) => {
 
     const channels = JSON.parse(fs.readFileSync("data/channels.json"));
     const results = [];
+    const seenChannels = new Set();
 
     // Shuffle channels array for random order
     const shuffledChannels = channels.slice().sort(() => Math.random() - 0.5);
     for (const channel of shuffledChannels) {
+      // Use channelId if available, else fallback to name for deduplication
+      const uniqueKey = channel.channelId || channel.name;
+      if (seenChannels.has(uniqueKey)) continue;
+      seenChannels.add(uniqueKey);
+
       if (channel.ad) {
         results.push({
           channel: channel.name,
@@ -250,10 +196,12 @@ app.get("/api/latest-videos", async (req, res) => {
       if (video) {
         results.push({
           channel: channel.name,
+          FullyForked: channel.FullyForked === true,
           title: video.snippet.title,
           videoId: video.id.videoId,
           thumbnail: video.snippet.thumbnails.high.url,
-          socials: channel.socials || {}
+          socials: channel.socials || {},
+          website: channel.socials && channel.socials.website && channel.socials.website.url ? channel.socials.website.url : undefined
         });
       }
     }

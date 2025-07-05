@@ -6,22 +6,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-  <style>
-    .sticky-footer {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background: #181a1b;
-      z-index: 100;
-    }
-    body { padding-bottom: 120px; }
-  </style>
 </head>
 <body>
   <div id="shared-navbar"></div>
-  <div class="container py-5">
-    <h1 class="mb-2 text-center" style="text-shadow: 0 0 12px #8f94fb, 0 0 20px #8f94fb;">Fully Forked</h1>    
+  <div class="container py-1">
+    <div class="my-4">
+      <h1 class="mb-2 text-center" style="text-shadow: 0 0 12px #8f94fb, 0 0 20px #8f94fb;">Fully Forked</h1>
+    </div>
     <div id="videoGrid" class="row mt-2" style="display:none;"></div>
   </div>
   <div id="shared-modals"></div>
@@ -37,7 +28,7 @@
         document.getElementById('nav-fullyforked')?.classList.add('active');
       });
     // Dynamically load shared modals
-    fetch('modals/ modals.html')
+    fetch('modals/modals.html')
       .then(res => res.text())
       .then(html => {
         document.getElementById('shared-modals').innerHTML = html;

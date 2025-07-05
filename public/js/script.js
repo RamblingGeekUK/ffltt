@@ -1,16 +1,18 @@
 const videoGrid = document.getElementById("videoGrid");
 videoGrid.style.display = "none";
 
-fetch("/data/channels.json")
+fetch("/api/latest-videos")
   .then(res => {
     if (!res.ok) {
       throw new Error(`HTTP error! status: ${res.status}`);
     }
     return res.json();
   })
-  .then(channels => {
-    // Only show FullyForked channels
-    const filtered = channels.filter(c => c.FullyForked === true || c.ad);
+  .then(videos => {
+    // Only show FullyForked channels (and ads)
+    let filtered = videos.filter(c => c.FullyForked === true || c.ad);
+    // Shuffle the filtered array
+    filtered = filtered.sort(() => Math.random() - 0.5);
     const grid = document.getElementById("videoGrid");
     grid.innerHTML = "";
     if (filtered.length === 0) {
@@ -23,7 +25,7 @@ fetch("/data/channels.json")
           // Render AD card
           col.innerHTML = `
             <div class="card h-100 shadow-lg border-0 border-warning" style="border-width: 2px !important;">
-              <img src="${channel.image || ''}" class="card-img-top" alt="${channel.name}" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; object-fit: cover; height: 220px; background: #23272a;">
+              <img src="${channel.thumbnail || channel.image || ''}" class="card-img-top" alt="${channel.channel}" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; object-fit: cover; height: 220px; background: #23272a;">
               <div class="card-body d-flex flex-column justify-content-between">
                 <h5 class="card-title fw-semibold text-warning">${channel.name} <span style="font-size:0.8em;" class="badge bg-warning text-dark ms-2">NOT AN AD</span></h5>
                 <a href="${channel.website}" target="_blank" class="btn btn-warning w-100 mt-auto">Visit Website</a>
@@ -31,13 +33,18 @@ fetch("/data/channels.json")
             </div>
           `;
         } else {
-          // Render normal channel card
+          // Render normal channel card with latest video thumbnail
           col.innerHTML = `
             <div class="card h-100 shadow-lg border-0">
-              <img src="${channel.socials.youtube && channel.socials.youtube.url ? 'https://img.youtube.com/vi/' + (channel.socials.youtube.url.split('/').pop()) + '/hqdefault.jpg' : ''}" class="card-img-top" alt="${channel.name}" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; object-fit: cover; height: 220px; background: #23272a;">
+              <a href="https://youtube.com/watch?v=${channel.videoId}" target="_blank">
+                <img src="${channel.thumbnail || ''}" class="card-img-top" alt="${channel.name}" style="border-top-left-radius: 1rem; border-top-right-radius: 1rem; object-fit: cover; height: 220px; background: #23272a;">
+              </a>
               <div class="card-body d-flex flex-column justify-content-between">
                 <div class="d-flex align-items-center mb-2 mt-2">
-                  <span style="color: #b0b3b8; font-size: 1.05em;">${channel.name}</span>
+                  <span style="color: #b0b3b8; font-size: 1.05em;">${channel.channel}</span>
+                </div>
+                <div class="mb-2">
+                  <span style="font-size:0.95em; color:#aaa;">${channel.title ? channel.title : ''}</span>
                 </div>
                 <div class="social-icons mb-2">
                   ${channel.socials && channel.socials.youtube && channel.socials.youtube.visible ? `<a href="${channel.socials.youtube.url}" target="_blank" title="YouTube" class="ms-1"><svg width="20" height="20" fill="#ff0000" viewBox="0 0 24 24"><path d="M23.498 6.186a2.994 2.994 0 0 0-2.112-2.12C19.228 3.5 12 3.5 12 3.5s-7.228 0-9.386.566A2.994 2.994 0 0 0 .502 6.186C0 8.344 0 12 0 12s0 3.656.502 5.814a2.994 2.994 0 0 0 2.112 2.12C4.772 20.5 12 20.5 12 20.5s7.228 0 9.386-.566a2.994 2.994 0 0 0 2.112-2.12C24 15.656 24 12 24 12s0-3.656-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>` : ''}
@@ -45,7 +52,7 @@ fetch("/data/channels.json")
                   ${channel.socials && channel.socials.bluesky && channel.socials.bluesky.visible ? `<a href="${channel.socials.bluesky.url}" target="_blank" title="Bluesky" class="ms-1"><svg width="20" height="20" fill="#0077ff" viewBox="0 0 24 24"><path d="M12 2c1.657 0 3 1.343 3 3 0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3zm0 18c-1.657 0-3-1.343-3-3 0-1.657 1.343-3 3-3s3 1.343 3 3c0 1.657-1.343 3-3 3zm9-9c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3zm-18 0c0 1.657 1.343 3 3 3s3-1.343 3-3c0-1.657-1.343-3-3-3s-3 1.343-3 3z"/></svg></a>` : ''}
                   ${channel.socials && channel.socials.instagram && channel.socials.instagram.visible ? `<a href="${channel.socials.instagram.url}" target="_blank" title="Instagram" class="ms-1"><svg width="20" height="20" fill="#fff" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" stroke="#fff" stroke-width="1.5" fill="none"/><rect x="8.5" y="8.5" width="7" height="7" rx="2" stroke="#fff" stroke-width="1.5" fill="none"/><circle cx="16.2" cy="7.8" r="1.1" fill="#fff"/></svg></a>` : ''}
                 </div>
-                <a href="${channel.socials.youtube && channel.socials.youtube.url ? channel.socials.youtube.url : '#'}" target="_blank" class="btn btn-primary w-100 mt-auto">Visit Channel</a>
+                <a href="https://youtube.com/watch?v=${channel.videoId}" target="_blank" class="btn btn-primary w-100 mt-auto">Watch Latest Video</a>
               </div>
             </div>
           `;

@@ -190,9 +190,25 @@
   background: #4e54c8;
   color: #fff;
 }
-/* Stylish footer links */
+
+.sticky-footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background: #181a1b;
+      z-index: 100;
+    }
+    body { padding-bottom: 120px; }
+
 .stylish-footer {
-  background: transparent;
+  background: #23272a;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+  font-size: 0.97em;
+  line-height: 1.3;
+  min-height: unset;
+  margin-top: 1.5rem;
 }
 .footer-link {
   color: #8f94fb;
@@ -219,8 +235,15 @@ body {
   color: #f1f3f4;
 }
 
+
 h1, h3 {
   color: #f8fafb;
+  margin-bottom: 2.2rem;
+  margin-top: 1.5rem;
+}
+
+#videoGrid {
+  margin-top: 1.5rem;
 }
 
 .card {
@@ -318,4 +341,11 @@ h1, h3 {
 ::-webkit-scrollbar-thumb {
   background: #444950;
   border-radius: 4px;
+}
+#shared-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1050;
+  background: #181a1b;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
 }
