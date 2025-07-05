@@ -1,23 +1,5 @@
-<footer class="text-center py-4 mt-5 stylish-footer sticky-footer">
+<footer class="text-center py-4 mt-5 stylish-footer" style="flex-shrink:0;">
   <p>This site is not affiliated with Linus Media Group in any way! Just another side project from a fan.</p>
   <p>All videos are the property of their respective owners.</p>
   <div id="cacheInfo" class="mt-3" style="font-size:0.95em; color:#aaa;"></div>
-  <script>
-    // Fetch cache info from API and display last updated time
-    fetch('/api/cache-info')
-      .then(res => res.json())
-      .then(data => {
-        if (data && data.lastUpdated && data.ttl) {
-          const last = new Date(data.lastUpdated);
-          const now = new Date();
-          const diffMs = now - last;
-          const diffHrs = Math.floor(diffMs / 3600000);
-          const diffMin = Math.floor((diffMs % 3600000) / 60000);
-          const next = new Date(last.getTime() + data.ttl * 1000);
-          document.getElementById('cacheInfo').textContent =
-            `Cache last updated: ${last.toLocaleString()} (${diffHrs}h ${diffMin}m ago). Next update: ${next.toLocaleString()}.`;
-        }
-      })
-      .catch(() => {});
-  </script>
 </footer>

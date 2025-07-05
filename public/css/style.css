@@ -191,15 +191,18 @@
   color: #fff;
 }
 
-.sticky-footer {
-      position: fixed;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      background: #181a1b;
-      z-index: 100;
-    }
-    body { padding-bottom: 120px; }
+
+html, body {
+  height: 100%;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.site-content {
+  flex: 1 0 auto;
+}
 
 .stylish-footer {
   background: #23272a;

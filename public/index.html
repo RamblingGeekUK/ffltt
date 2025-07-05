@@ -9,7 +9,7 @@
 </head>
 <body>
   <div id="shared-navbar"></div>
-  <div class="container py-1">
+  <div class="container py-1 site-content">
     <div class="my-4">
       <h1 class="mb-2 text-center" style="text-shadow: 0 0 12px #8f94fb, 0 0 20px #8f94fb;">Fully Forked</h1>
     </div>
@@ -39,6 +39,24 @@
       .then(res => res.text())
       .then(html => {
         document.getElementById('shared-footer').innerHTML = html;
+        // Now run the cache info script
+        fetch('/api/cache-info')
+          .then(res => res.json())
+          .then(data => {
+            if (data && data.lastUpdated && data.ttl) {
+              const last = new Date(data.lastUpdated);
+              const now = new Date();
+              const diffMs = now - last;
+              const diffHrs = Math.floor(diffMs / 3600000);
+              const diffMin = Math.floor((diffMs % 3600000) / 60000);
+              const next = new Date(last.getTime() + data.ttl * 1000);
+              const el = document.getElementById('cacheInfo');
+              if (el) {
+                el.textContent = `Cache last updated: ${last.toLocaleString()} (${diffHrs}h ${diffMin}m ago). Next update: ${next.toLocaleString()}.`;
+              }
+            }
+          })
+          .catch(() => {});
       });
   </script>
   <script src="js/modals.js"></script>
