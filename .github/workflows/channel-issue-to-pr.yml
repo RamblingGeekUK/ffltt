@@ -1,0 +1,69 @@
+name: Channel Issue to PR
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  update-channels-json:
+    if: github.event.label.name == 'accepted'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: read
+      pull-requests: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install jq and gh cli
+        run: |
+          sudo apt-get update && sudo apt-get install -y jq
+          sudo apt-get install -y gh
+
+      - name: Parse issue and update channels.json
+        id: update
+        run: |
+          ISSUE_NUMBER=${{ github.event.issue.number }}
+          gh issue view $ISSUE_NUMBER --json body > issue.json
+          BODY=$(jq -r .body issue.json)
+
+          # Extract fields from the issue template
+          CHANNEL_NAME=$(echo "$BODY" | grep -A1 'Channel Name' | tail -n1 | xargs)
+          YOUTUBE_URL=$(echo "$BODY" | grep -A1 'YouTube URL' | tail -n1 | xargs)
+          FULLY_FORKED=$(echo "$BODY" | grep -A1 'Fully Forked' | tail -n1 | xargs)
+          SOCIALS=$(echo "$BODY" | grep -A1 'Socials' | tail -n1 | xargs)
+
+          # Fallback if socials is empty
+          if [ -z "$SOCIALS" ]; then
+            SOCIALS="{}"
+          fi
+
+          # Extract channelId from YouTube URL
+          CHANNEL_ID=$(echo "$YOUTUBE_URL" | grep -oE 'channel/[^/]+$' | cut -d'/' -f2)
+
+          # Build new channel JSON entry
+          NEW_ENTRY=$(jq -n --arg name "$CHANNEL_NAME" --arg channelId "$CHANNEL_ID" --argjson socials "$SOCIALS" --argjson forked "$FULLY_FORKED" '{name: $name, channelId: $channelId, socials: $socials, FullyForked: ($forked == true or $forked == "true") }')
+
+          # Append to channels.json (if not already present)
+          jq ". + [${NEW_ENTRY}]" data/channels.json > data/channels.json.new
+          mv data/channels.json.new data/channels.json
+
+      - name: Commit and create PR
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Add/update channel from issue #${{ github.event.issue.number }}"
+          title: "Add/update channel from issue #${{ github.event.issue.number }}"
+          body: "This PR was auto-generated from an accepted issue."
+          branch: "auto/channel-update-${{ github.event.issue.number }}"
+          base: main
+
+      - name: Comment on issue
+        run: gh issue comment ${{ github.event.issue.number }} --body "A pull request has been created to update channels.json!"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

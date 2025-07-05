@@ -1,0 +1,33 @@
+name: Channel Request
+description: Suggest a new channel or update an existing one.
+title: "[Channel] "
+labels: ["channel-request"]
+body:
+  - type: input
+    id: channel_name
+    attributes:
+      label: Channel Name
+      description: The name of the channel
+    validations:
+      required: true
+  - type: input
+    id: youtube_url
+    attributes:
+      label: YouTube URL
+      description: The main YouTube channel URL
+    validations:
+      required: true
+  - type: input
+    id: fully_forked
+    attributes:
+      label: Fully Forked?
+      description: true or false
+    validations:
+      required: true
+  - type: textarea
+    id: socials
+    attributes:
+      label: Socials (JSON)
+      description: Paste a JSON object for socials (see README for format)
+    validations:
+      required: false
