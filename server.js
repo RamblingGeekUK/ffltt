@@ -8,11 +8,11 @@ const PORT = process.env.PORT || 3000;
 const YT_API_KEY = process.env.YOUTUBE_API_KEY;
 
 app.use(express.static("public"));
-
+app.use('/data', express.static('data'));
 
 // Branching Out videos endpoint
 app.get("/api/branching-out-videos", async (req, res) => {
-  const CACHE_FILE = "branchingOutVideos.json";
+  const CACHE_FILE = "data/branchingOutVideos.json";
   const CACHE_TTL = 7 * 24 * 60 * 60 * 1000; // 7 days in ms
   try {
     let useCache = false;
@@ -30,7 +30,7 @@ app.get("/api/branching-out-videos", async (req, res) => {
       return res.json(cached);
     }
 
-    const channels = JSON.parse(fs.readFileSync("branchingOutChannels.json"));
+    const channels = JSON.parse(fs.readFileSync("data/channels.json"));
     const results = [];
     for (const channel of channels) {
       if (channel.ad) {
@@ -124,8 +124,8 @@ app.post('/api/submit-creator', express.json(), async (req, res) => {
 
 // Cache info endpoint for frontend footer
 app.get('/api/cache-info', (req, res) => {
-  const CACHE_FILE = 'latestVideos.json';
-  const CACHE_TTL = 7 * 24 * 60 * 60; // 7 days in seconds
+  const CACHE_FILE = 'data/latestVideos.json';
+  const CACHE_TTL = 48 * 60 * 60; // 48 hours in seconds
   try {
     if (!fs.existsSync(CACHE_FILE)) {
       return res.json({ lastUpdated: null, ttl: CACHE_TTL });
@@ -141,6 +141,7 @@ app.get('/api/cache-info', (req, res) => {
 });
 
 app.use(express.static("public"));
+app.use('/data', express.static('data'));
 
 app.post('/api/contact', express.json(), async (req, res) => {
   const { name, email, message, turnstileToken } = req.body;
@@ -194,7 +195,7 @@ app.post('/api/contact', express.json(), async (req, res) => {
 
 app.get("/api/latest-videos", async (req, res) => {
   const CACHE_FILE = "latestVideos.json";
-  const CACHE_TTL = 7 * 24 * 60 * 60 * 1000; // 7 days in ms (once a week)
+  const CACHE_TTL = 48 * 60 * 60; // 48 hours in seconds; // 7 days in ms (once a week)
   try {
     let useCache = false;
     let cacheExists = fs.existsSync(CACHE_FILE);
@@ -207,8 +208,8 @@ app.get("/api/latest-videos", async (req, res) => {
     }
 
     // Fallback: use static cache if present and no cache file exists
-    if (!cacheExists && fs.existsSync('static-latestVideos.json')) {
-      const fallback = JSON.parse(fs.readFileSync('static-latestVideos.json'));
+    if (!cacheExists && fs.existsSync('data/static-latestVideos.json')) {
+      const fallback = JSON.parse(fs.readFileSync('data/static-latestVideos.json'));
       const shuffled = fallback.slice().sort(() => Math.random() - 0.5);
       return res.json(shuffled);
     }
@@ -220,7 +221,7 @@ app.get("/api/latest-videos", async (req, res) => {
       return res.json(shuffled);
     }
 
-    const channels = JSON.parse(fs.readFileSync("channels.json"));
+    const channels = JSON.parse(fs.readFileSync("data/channels.json"));
     const results = [];
 
     // Shuffle channels array for random order
