@@ -41,21 +41,7 @@ jobs:
           CHANNEL_NAME=$(echo "$BODY" | grep -A1 'Channel Name' | tail -n1 | xargs)
           YOUTUBE_URL=$(echo "$BODY" | grep -A1 'YouTube URL' | tail -n1 | xargs)
           FULLY_FORKED=$(echo "$BODY" | grep -A1 'Fully Forked' | tail -n1 | xargs)
-          SOCIALS=$(echo "$BODY" | grep -A1 'Socials' | tail -n1 | xargs)
 
-          # Fallback if socials is empty or not valid JSON
-          if [ -z "$SOCIALS" ]; then
-            SOCIALS="{}"
-          else
-            echo "$SOCIALS" | jq empty 2>/dev/null
-            if [ $? -ne 0 ]; then
-              SOCIALS="{}"
-            fi
-          fi
-          # Remove any newlines or carriage returns from socials
-          SOCIALS=$(echo "$SOCIALS" | tr -d '\r\n')
-          # Debug output
-          echo "Final SOCIALS: $SOCIALS"
 
           # Fallback if fully_forked is not valid JSON (should be true/false)
           if ! echo "$FULLY_FORKED" | jq empty 2>/dev/null; then
@@ -69,9 +55,8 @@ jobs:
           # Extract channelId from YouTube URL
           CHANNEL_ID=$(echo "$YOUTUBE_URL" | grep -oE 'channel/[^/]+$' | cut -d'/' -f2)
 
-          # Build new channel JSON entry (robust: use temp file for socials)
-          echo "$SOCIALS" > socials.json
-          NEW_ENTRY=$(jq -n --arg name "$CHANNEL_NAME" --arg channelId "$CHANNEL_ID" --argjson forked "$FULLY_FORKED" --slurpfile socials socials.json '{name: $name, channelId: $channelId, socials: $socials[0], FullyForked: ($forked == true or $forked == "true") }')
+          # Build new channel JSON entry (no socials)
+          NEW_ENTRY=$(jq -n --arg name "$CHANNEL_NAME" --arg channelId "$CHANNEL_ID" --argjson forked "$FULLY_FORKED" '{name: $name, channelId: $channelId, FullyForked: ($forked == true or $forked == "true") }')
 
           # Append to channels.json (if not already present)
           echo "$NEW_ENTRY" > new_entry.json
