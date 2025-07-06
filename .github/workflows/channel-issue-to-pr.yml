@@ -43,6 +43,11 @@ jobs:
           YOUTUBE_URL=$(echo "$BODY" | grep -A1 'YouTube URL' | tail -n1 | xargs)
           FULLY_FORKED=$(echo "$BODY" | grep -A1 'Fully Forked' | tail -n1 | xargs)
 
+          # Debug: Show parsed values
+          echo "CHANNEL_NAME: $CHANNEL_NAME"
+          echo "YOUTUBE_URL: $YOUTUBE_URL"
+          echo "FULLY_FORKED: $FULLY_FORKED"
+          echo "BODY: $BODY"
 
           # Fallback if fully_forked is not valid JSON (should be true/false)
           if ! echo "$FULLY_FORKED" | jq empty 2>/dev/null; then
