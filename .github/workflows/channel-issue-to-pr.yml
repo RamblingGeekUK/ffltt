@@ -71,7 +71,7 @@ jobs:
 
           # Build new channel JSON entry (robust: use temp file for socials)
           echo "$SOCIALS" > socials.json
-          NEW_ENTRY=$(jq -n --arg name "$CHANNEL_NAME" --arg channelId "$CHANNEL_ID" --argjson socials "$(cat socials.json)" --argjson forked "$FULLY_FORKED" '{name: $name, channelId: $channelId, socials: $socials, FullyForked: ($forked == true or $forked == "true") }')
+          NEW_ENTRY=$(jq -n --arg name "$CHANNEL_NAME" --arg channelId "$CHANNEL_ID" --argjson forked "$FULLY_FORKED" --slurpfile socials socials.json '{name: $name, channelId: $channelId, socials: $socials[0], FullyForked: ($forked == true or $forked == "true") }')
 
           # Append to channels.json (if not already present)
           jq ". + [${NEW_ENTRY}]" data/channels.json > data/channels.json.new
