@@ -13,7 +13,9 @@
               <button class="accordion-button bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">What is this site?</button>
             </h2>
             <div id="faq1" class="accordion-collapse collapse show" aria-labelledby="faq1-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">This site helps you find the latest videos from creators who previously worked at Linus Tech Tips (LTT).</div>
+              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">
+                The original idea was to help people find former LTT employees—those who had 'Fully Forked'. Over time, it expanded to also include current employees, under the section called 'Branching Out'.
+              </div>
             </div>
           </div>
           <div class="accordion-item bg-dark text-light border-secondary">
@@ -29,7 +31,7 @@
               <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">How often is the data updated?</button>
             </h2>
             <div id="faq3" class="accordion-collapse collapse" aria-labelledby="faq3-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">The video list is refreshed once per week (people don't leave that often, thankfully) to reduce API usage and improve performance.</div>
+              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">The video list refreshing has gone from once every 24 hours to once per week, to 48 hours, I'm trying to figure out the correct balance on the YouTube API Calls.</div>
             </div>
           </div>
           <div class="accordion-item bg-dark text-light border-secondary">
@@ -39,21 +41,13 @@
             <div id="faq4" class="accordion-collapse collapse" aria-labelledby="faq4-heading" data-bs-parent="#faqAccordion">
               <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">Yes! Click feedback, to erm, provide feedback.</div>
             </div>
-          </div>
-          <div class="accordion-item bg-dark text-light border-secondary">
-            <h2 class="accordion-header" id="faq5-heading">
-              <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq5" aria-expanded="false" aria-controls="faq5" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">I can't send a message?</button>
-            </h2>
-            <div id="faq5" class="accordion-collapse collapse" aria-labelledby="faq5-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">Refresh, it should work, the site is using Cloudflare's Turnstile. I'm still figuring it out.</div>
-            </div>
-          </div>
+          </div>          
           <div class="accordion-item bg-dark text-light border-secondary">
             <h2 class="accordion-header" id="faq6-heading">
               <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq6" aria-expanded="false" aria-controls="faq6" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">Why are people missing?</button>
             </h2>
             <div id="faq6" class="accordion-collapse collapse" aria-labelledby="faq6-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">If you think someone is missing see FAQ 4, otherwise they are still working at LTT.</div>
+              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">If you think someone is missing provide feedback and let me know.</div>
             </div>
           </div>
           <div class="accordion-item bg-dark text-light border-secondary">
@@ -61,7 +55,7 @@
               <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq7" aria-expanded="false" aria-controls="faq7" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">Wait you have Ad's, are you making money from this?</button>
             </h2>
             <div id="faq7" class="accordion-collapse collapse" aria-labelledby="faq7-heading" data-bs-parent="#faqAccordion">
-              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">The AD "card" was added partly as a joke—think LTTStore.com—and partly to help fill out the page. The site doesn’t make any money; it’s just a fun project… unless, of course, you do want to buy an AD card fire me a message via Feedback.</div>
+              <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">The AD "card" was added partly as a joke—think "LTTStore.com" and partly to help fill out the page. The site doesn’t make any money, it' actually costs me money; it’s just a fun project… unless, of course, you do want to buy an AD card, then fire me a message via Feedback (create an issue).</div>
             </div>
           </div>
           <div class="accordion-item bg-dark text-light border-secondary">
@@ -69,7 +63,7 @@
             <button class="accordion-button collapsed bg-dark text-info fw-bold shadow-sm" type="button" data-bs-toggle="collapse" data-bs-target="#faq8" aria-expanded="false" aria-controls="faq8" style="border-bottom:1px solid #444; font-size:1.15rem; letter-spacing:0.5px;">Why are they displayed in a random order?</button>
           </h2>
           <div id="faq8" class="accordion-collapse collapse" aria-labelledby="faq8-heading" data-bs-parent="#faqAccordion">
-            <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">To try and make sure all creators are seen and no one creator is singled out.</div>
+            <div class="accordion-body bg-dark text-white" style="border-top:1px solid #444; font-size:1rem;">To try and make sure all creators are seen!</div>
           </div>
         </div>
         </div>
@@ -89,7 +83,7 @@
       <div class="modal-body">
         <p>We welcome your feedback, suggestions, and creator submissions!</p>
         <p>
-          Please <a href="https://github.com/your-repo/issues/new?labels=feedback" target="_blank" rel="noopener">open a GitHub issue</a> to submit feedback, report bugs, or suggest new creators.<br>
+          Please <a href="https://github.com/RamblingGeekUK/ffltt/issues" target="_blank" rel="noopener">open a GitHub issue</a> to submit feedback, report bugs, or suggest new creators.<br>
           <small class="text-secondary">(A GitHub account is required. This helps us keep track of all requests and suggestions in one place.)</small>
         </p>
         <ul>
@@ -99,7 +93,7 @@
         <p class="mt-3">Thank you for helping improve the project!</p>
       </div>
       <div class="modal-footer">
-        <a href="https://github.com/your-repo/issues/new?labels=feedback" target="_blank" rel="noopener" class="btn btn-primary">Open GitHub Issue</a>
+        <a href="https://github.com/RamblingGeekUK/ffltt/issues" target="_blank" rel="noopener" class="btn btn-primary">Open GitHub Issue</a>
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
