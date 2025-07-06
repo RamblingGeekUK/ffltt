@@ -10,7 +10,7 @@
       },
       "website": {
         "url": "",
-        "visible": true
+        "visible": false
       },
       "bluesky": {
         "url": "",
@@ -37,7 +37,7 @@
       },
       "website": {
         "url": "",
-        "visible": true
+        "visible": false
       },
       "bluesky": {
         "url": "",
@@ -64,7 +64,7 @@
       },
       "website": {
         "url": "",
-        "visible": true
+        "visible": false
       },
       "bluesky": {
         "url": "",
@@ -91,7 +91,7 @@
       },
       "website": {
         "url": "",
-        "visible": true
+        "visible": false
       },
       "bluesky": {
         "url": "",
@@ -124,14 +124,14 @@
       },
       "website": {
         "url": "",
-        "visible": true
+        "visible": false
       },
       "bluesky": {
-        "url": "https://bsky.app/profile/placeholder",
+        "url": "",
         "visible": false
       },
       "instagram": {
-        "url": "https://instagram.com/placeholder",
+        "url": "",
         "visible": false
       },
       "youtube": {
@@ -155,7 +155,7 @@
       },
       "website": {
         "url": "",
-        "visible": true
+        "visible": false
       },
       "bluesky": {
         "url": "",
@@ -190,7 +190,7 @@
       },
       "instagram": {
         "url": "https://www.instagram.com/dubmfg",
-        "visible": false
+        "visible": true
       },
       "youtube": {
         "url": "https://www.youtube.com/@dubmfg",
@@ -213,7 +213,7 @@
       },
       "website": {
         "url": "",
-        "visible": true
+        "visible": false
       },
       "bluesky": {
         "url": "",
@@ -224,7 +224,7 @@
         "visible": false
       },
       "youtube": {
-        "url": "http://www.youtube.com/@tannermccoolman4647",
+        "url": "https://www.youtube.com/@tannermccoolman4647",
         "visible": true
       }
     }
@@ -240,7 +240,7 @@
       },
       "website": {
         "url": "",
-        "visible": true
+        "visible": false
       },
       "bluesky": {
         "url": "",
@@ -251,7 +251,7 @@
         "visible": false
       },
       "youtube": {
-        "url": "http://www.youtube.com/@SexyLittleFatBoy1",
+        "url": "https://www.youtube.com/@SexyLittleFatBoy1",
         "visible": true
       }
     }
@@ -267,7 +267,7 @@
       },
       "website": {
         "url": "",
-        "visible": true
+        "visible": false
       },
       "bluesky": {
         "url": "",
@@ -278,7 +278,7 @@
         "visible": false
       },
       "youtube": {
-        "url": "http://www.youtube.com/@SexyLittleFatBoy",
+        "url": "https://www.youtube.com/@SexyLittleFatBoy",
         "visible": true
       }
     }
@@ -293,11 +293,11 @@
         "visible": false
       },
       "website": {
-        "url": "kacboy.com",
+        "url": "https://kacboy.com",
         "visible": true
       },
       "bluesky": {
-        "url": "bsky.app/profile/kacboy.com",
+        "url": "https://bsky.app/profile/kacboy.com",
         "visible": true
       },
       "instagram": {
@@ -325,10 +325,10 @@
       },
       "website": {
         "url": "",
-        "visible": true
+        "visible": false
       },
       "bluesky": {
-        "url": "bsky.app/profile/kacboy.com",
+        "url": "https://bsky.app/profile/kacboy.com",
         "visible": true
       },
       "instagram": {
@@ -336,7 +336,7 @@
         "visible": false
       },
       "youtube": {
-        "url": "http://www.youtube.com/@MarcusBlackstock",
+        "url": "https://www.youtube.com/@MarcusBlackstock",
         "visible": true
       }
     }
@@ -352,7 +352,7 @@
       },
       "website": {
         "url": "",
-        "visible": true
+        "visible": false
       },
       "bluesky": {
         "url": "",
@@ -363,7 +363,7 @@
         "visible": false
       },
       "youtube": {
-        "url": "http://www.youtube.com/@pokefesterJr",
+        "url": "https://www.youtube.com/@pokefesterJr",
         "visible": true
       }
     }
@@ -379,7 +379,7 @@
       },
       "website": {
         "url": "",
-        "visible": true
+        "visible": false
       },
       "bluesky": {
         "url": "",
@@ -390,7 +390,7 @@
         "visible": false
       },
       "youtube": {
-        "url": "http://www.youtube.com/@colindegraafmedia",
+        "url": "https://www.youtube.com/@colindegraafmedia",
         "visible": true
       }
     }
@@ -407,7 +407,7 @@
     "FullyForked": false,
     "socials": {
       "youtube": {
-        "url": "http://www.youtube.com/@BocaBola_",
+        "url": "https://www.youtube.com/@BocaBola_",
         "visible": true
       },
       "twitter": {
@@ -421,6 +421,10 @@
       "bluesky": {
         "url": "",
         "visible": false
+      },
+      "twitch": {
+        "url": "https://www.twitch.tv/bocabola",
+        "visible": true
       }
     }
   },
@@ -430,7 +434,7 @@
     "name": "BuhDan (Dan)",
     "socials": {
       "youtube": {
-        "url": "http://www.youtube.com/@buhdan",
+        "url": "https://www.youtube.com/@buhdan",
         "visible": true
       },
       "twitter": {
@@ -452,12 +456,12 @@
     }
   },
   {
-    "channelId": "UCAV3WZWnCvL0l5DzF6ogc1w",
+    "channelId": "UCL81YHgzH8tcrFfOJJwlSQw",
     "FullyForked": false,
     "name": "CatTips",
     "socials": {
       "youtube": {
-        "url": "http://www.youtube.com/@LinusCatTips",
+        "url": "https://www.youtube.com/@LinusCatTips",
         "visible": true
       },
       "twitter": {
@@ -473,7 +477,7 @@
         "visible": false
       },
       "soundcloud": {
-        "url": "https://soundcloud.com/buhdan",
+        "url": "",
         "visible": false
       }
     }
@@ -489,7 +493,7 @@
       },
       "website": {
         "url": "",
-        "visible": true
+        "visible": false
       },
       "bluesky": {
         "url": "",
@@ -501,6 +505,10 @@
       },
       "youtube": {
         "url": "https://www.youtube.com/channel/UCC43rlliFy4vFFTVJWao0Hw",
+        "visible": true
+      },
+      "twitch": {
+        "url": "https://www.twitch.tv/luke_lafr",
         "visible": true
       }
     }
