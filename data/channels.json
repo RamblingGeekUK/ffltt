@@ -4,11 +4,26 @@
     "name": "Zip Tie Tuning",
     "FullyForked": true,
     "socials": {
-      "twitter": { "url": "https://x.com/AlexTheGreatish", "visible": true },
-      "website": { "url" : "","visible": true},
-      "bluesky": { "url": "", "visible": false },
-      "instagram": { "url": "https://www.instagram.com/alexthegreatish", "visible": true },
-      "youtube": { "url": "https://youtube.com/channel/UCWqW23Ko6dbscptZYyQE-8A", "visible": true }
+      "twitter": {
+        "url": "https://x.com/AlexTheGreatish",
+        "visible": true
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "https://www.instagram.com/alexthegreatish",
+        "visible": true
+      },
+      "youtube": {
+        "url": "https://youtube.com/channel/UCWqW23Ko6dbscptZYyQE-8A",
+        "visible": true
+      }
     }
   },
   {
@@ -16,11 +31,26 @@
     "name": "Taran Van Hemert",
     "FullyForked": true,
     "socials": {
-      "twitter": { "url": "https://x.com/taranvh", "visible": true },
-      "website": { "url" : "","visible": true},
-      "bluesky": { "url": "", "visible": false },
-      "instagram": { "url": "", "visible": false },
-      "youtube": { "url": "https://youtube.com/channel/UCd0ZD4iCXRXf18p3cA7EQfg", "visible": true }
+      "twitter": {
+        "url": "https://x.com/taranvh",
+        "visible": true
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "",
+        "visible": false
+      },
+      "youtube": {
+        "url": "https://youtube.com/channel/UCd0ZD4iCXRXf18p3cA7EQfg",
+        "visible": true
+      }
     }
   },
   {
@@ -28,11 +58,26 @@
     "name": "Taran Van Hemert 2",
     "FullyForked": true,
     "socials": {
-      "twitter": { "url": "https://x.com/taranvh", "visible": true },
-      "website": { "url" : "","visible": true},
-      "bluesky": { "url": "", "visible": false },
-      "instagram": { "url": "", "visible": false },
-      "youtube": { "url": "https://youtube.com/channel/UCkTnIE2RohNA1eV4v-nov7A", "visible": true }
+      "twitter": {
+        "url": "https://x.com/taranvh",
+        "visible": true
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "",
+        "visible": false
+      },
+      "youtube": {
+        "url": "https://youtube.com/channel/UCkTnIE2RohNA1eV4v-nov7A",
+        "visible": true
+      }
     }
   },
   {
@@ -40,14 +85,29 @@
     "name": "Brandon Y Lee",
     "FullyForked": true,
     "socials": {
-      "twitter": { "url": "https://twitter.com/Brandon_Y_Lee", "visible": true },
-      "website": { "url" : "","visible": true},
-      "bluesky": { "url": "", "visible": false },
-      "instagram": { "url": "https://instagram.com/brandon_y_lee", "visible": true },
-      "youtube": { "url": "https://youtube.com/channel/UC-WpvHaSBQEAztK6n_CupOg", "visible": true }
+      "twitter": {
+        "url": "https://twitter.com/Brandon_Y_Lee",
+        "visible": true
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "https://instagram.com/brandon_y_lee",
+        "visible": true
+      },
+      "youtube": {
+        "url": "https://youtube.com/channel/UC-WpvHaSBQEAztK6n_CupOg",
+        "visible": true
+      }
     }
   },
-    {
+  {
     "ad": true,
     "name": "LTT Store",
     "image": "images/LTT_Logo.webp",
@@ -58,12 +118,30 @@
     "name": "Emily Young",
     "FullyForked": true,
     "socials": {
-      "twitter": { "url": "https://x.com/emilyayoung1", "visible": true },
-      "website": { "url" : "","visible": true},
-      "bluesky": { "url": "https://bsky.app/profile/placeholder", "visible": false },
-      "instagram": { "url": "https://instagram.com/placeholder", "visible": false },
-      "youtube": { "url": "https://youtube.com/channel/UCFy9hgi7oH9pFBE4BwJMKRw", "visible": true },
-      "fediverse": { "url": "https://tech.lgbt/@emilyyoung", "visible": true }
+      "twitter": {
+        "url": "https://x.com/emilyayoung1",
+        "visible": true
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "https://bsky.app/profile/placeholder",
+        "visible": false
+      },
+      "instagram": {
+        "url": "https://instagram.com/placeholder",
+        "visible": false
+      },
+      "youtube": {
+        "url": "https://youtube.com/channel/UCFy9hgi7oH9pFBE4BwJMKRw",
+        "visible": true
+      },
+      "fediverse": {
+        "url": "https://tech.lgbt/@emilyyoung",
+        "visible": true
+      }
     }
   },
   {
@@ -71,11 +149,26 @@
     "name": "Nick Van Berkel ",
     "FullyForked": true,
     "socials": {
-      "twitter": { "url": "https://x.com/NEILVANBEIL", "visible": true },
-      "website": { "url" : "","visible": true},
-      "bluesky": { "url": "", "visible": false },
-      "instagram": { "url": "https://www.instagram.com/nickvanberkel", "visible": true },
-      "youtube": { "url": "https://youtube.com/channel/UCrhOy1ro4mJ9cO8LwSG4X5w", "visible": true }
+      "twitter": {
+        "url": "https://x.com/NEILVANBEIL",
+        "visible": true
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "https://www.instagram.com/nickvanberkel",
+        "visible": true
+      },
+      "youtube": {
+        "url": "https://youtube.com/channel/UCrhOy1ro4mJ9cO8LwSG4X5w",
+        "visible": true
+      }
     }
   },
   {
@@ -83,12 +176,30 @@
     "name": "Dub MFG",
     "FullyForked": true,
     "socials": {
-      "twitter": { "url": "", "visible": false },
-      "website": { "url" : "https://www.dubmfg.com/","visible": true},
-      "bluesky": { "url": "", "visible": false },
-      "instagram": { "url": "https://www.instagram.com/dubmfg", "visible": false },
-      "youtube": { "url": "https://www.youtube.com/@dubmfg", "visible": true },
-      "etsy": { "url": "https://www.etsy.com/ca/shop/DubMFG", "visible": true }
+      "twitter": {
+        "url": "",
+        "visible": false
+      },
+      "website": {
+        "url": "https://www.dubmfg.com/",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "https://www.instagram.com/dubmfg",
+        "visible": false
+      },
+      "youtube": {
+        "url": "https://www.youtube.com/@dubmfg",
+        "visible": true
+      },
+      "etsy": {
+        "url": "https://www.etsy.com/ca/shop/DubMFG",
+        "visible": true
+      }
     }
   },
   {
@@ -96,11 +207,26 @@
     "name": "Tanner McCoolman",
     "FullyForked": true,
     "socials": {
-      "twitter": { "url": "", "visible": false },
-      "website": { "url" : "","visible": true},
-      "bluesky": { "url": "", "visible": false },
-      "instagram": { "url": "", "visible": false },
-      "youtube": { "url": "http://www.youtube.com/@tannermccoolman4647", "visible": true }
+      "twitter": {
+        "url": "",
+        "visible": false
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "",
+        "visible": false
+      },
+      "youtube": {
+        "url": "http://www.youtube.com/@tannermccoolman4647",
+        "visible": true
+      }
     }
   },
   {
@@ -108,11 +234,26 @@
     "name": "Sexy Little Fat Boy aka Jessica Pigeau",
     "FullyForked": true,
     "socials": {
-      "twitter": { "url": "", "visible": false },
-      "website": { "url" : "","visible": true},
-      "bluesky": { "url": "", "visible": false },
-      "instagram": { "url": "", "visible": false },
-      "youtube": { "url": "http://www.youtube.com/@SexyLittleFatBoy1", "visible": true }
+      "twitter": {
+        "url": "",
+        "visible": false
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "",
+        "visible": false
+      },
+      "youtube": {
+        "url": "http://www.youtube.com/@SexyLittleFatBoy1",
+        "visible": true
+      }
     }
   },
   {
@@ -120,11 +261,26 @@
     "name": "Jessica Pigeau",
     "FullyForked": true,
     "socials": {
-      "twitter": { "url": "", "visible": false },
-      "website": { "url" : "","visible": true},
-      "bluesky": { "url": "", "visible": false },
-      "instagram": { "url": "", "visible": false },
-      "youtube": { "url": "http://www.youtube.com/@SexyLittleFatBoy", "visible": true }
+      "twitter": {
+        "url": "",
+        "visible": false
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "",
+        "visible": false
+      },
+      "youtube": {
+        "url": "http://www.youtube.com/@SexyLittleFatBoy",
+        "visible": true
+      }
     }
   },
   {
@@ -132,51 +288,114 @@
     "name": "Kacboy (Marcus Blackstock)",
     "FullyForked": true,
     "socials": {
-      "twitter": { "url": "", "visible": false },
-      "website": { "url" : "kacboy.com","visible": true},
-      "bluesky": { "url": "bsky.app/profile/kacboy.com", "visible": true },
-      "instagram": { "url": "", "visible": false },
-      "youtube": { "url": "https://www.youtube.com/@kacboy", "visible": true },
-      "ko-fi": { "url": "https://ko-fi.com/kacboy", "visible": true }
+      "twitter": {
+        "url": "",
+        "visible": false
+      },
+      "website": {
+        "url": "kacboy.com",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "bsky.app/profile/kacboy.com",
+        "visible": true
+      },
+      "instagram": {
+        "url": "",
+        "visible": false
+      },
+      "youtube": {
+        "url": "https://www.youtube.com/@kacboy",
+        "visible": true
+      },
+      "ko-fi": {
+        "url": "https://ko-fi.com/kacboy",
+        "visible": true
+      }
     }
   },
   {
-  "channelId": "UCKXq_PkhZfWKE91seN7-X5A",
-  "name": "Marcus Blackstock",
-  "FullyForked": true,
-  "socials": {
-    "twitter": { "url": "", "visible": false },
-    "website": { "url" : "","visible": true},
-    "bluesky": { "url": "bsky.app/profile/kacboy.com", "visible": true },
-    "instagram": { "url": "", "visible": false },
-    "youtube": { "url": "http://www.youtube.com/@MarcusBlackstock", "visible": true }
+    "channelId": "UCKXq_PkhZfWKE91seN7-X5A",
+    "name": "Marcus Blackstock",
+    "FullyForked": true,
+    "socials": {
+      "twitter": {
+        "url": "",
+        "visible": false
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "bsky.app/profile/kacboy.com",
+        "visible": true
+      },
+      "instagram": {
+        "url": "",
+        "visible": false
+      },
+      "youtube": {
+        "url": "http://www.youtube.com/@MarcusBlackstock",
+        "visible": true
+      }
     }
   },
   {
-  "channelId": "UCmM7wKR1pcwLGvJneyx4JHQ",
-  "name": "Hanna Luu",
-  "FullyForked": true,
-  "socials": {
-    "twitter": { "url": "", "visible": false },
-    "website": { "url" : "","visible": true},
-    "bluesky": { "url": "", "visible": false },
-    "instagram": { "url": "", "visible": false },
-    "youtube": { "url": "http://www.youtube.com/@pokefesterJr", "visible": true }
+    "channelId": "UCmM7wKR1pcwLGvJneyx4JHQ",
+    "name": "Hanna Luu",
+    "FullyForked": true,
+    "socials": {
+      "twitter": {
+        "url": "",
+        "visible": false
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "",
+        "visible": false
+      },
+      "youtube": {
+        "url": "http://www.youtube.com/@pokefesterJr",
+        "visible": true
+      }
     }
   },
-   {
-  "channelId": "UCE28vO93E6QB7V03ij7xAXA",
-  "name": "'Silent' Colin",
-  "FullyForked": true,
-  "socials": {
-    "twitter": { "url": "", "visible": false },
-    "website": { "url" : "","visible": true},
-    "bluesky": { "url": "", "visible": false },
-    "instagram": { "url": "", "visible": false },
-    "youtube": { "url": "http://www.youtube.com/@colindegraafmedia", "visible": true }
+  {
+    "channelId": "UCE28vO93E6QB7V03ij7xAXA",
+    "name": "'Silent' Colin",
+    "FullyForked": true,
+    "socials": {
+      "twitter": {
+        "url": "",
+        "visible": false
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "",
+        "visible": false
+      },
+      "youtube": {
+        "url": "http://www.youtube.com/@colindegraafmedia",
+        "visible": true
+      }
     }
   },
-   {
+  {
     "ad": true,
     "name": "Floatplane",
     "image": "images/fp.png",
@@ -187,37 +406,81 @@
     "name": "BocaBola (Elijah)",
     "FullyForked": false,
     "socials": {
-      "youtube": { "url": "http://www.youtube.com/@BocaBola_", "visible": true },
-      "twitter": { "url": "", "visible": false },
-      "instagram": { "url": "", "visible": false },
-      "bluesky": { "url": "", "visible": false }
+      "youtube": {
+        "url": "http://www.youtube.com/@BocaBola_",
+        "visible": true
+      },
+      "twitter": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "",
+        "visible": false
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      }
     }
   },
-   {
+  {
     "channelId": "UCAV3WZWnCvL0l5DzF6ogc1w",
     "FullyForked": false,
     "name": "BuhDan (Dan)",
     "socials": {
-      "youtube": { "url": "http://www.youtube.com/@buhdan", "visible": true },
-      "twitter": { "url": "", "visible": false },
-      "instagram": { "url": "", "visible": false },
-      "bluesky": { "url": "", "visible": false },
-      "soundcloud": {"url": "https://soundcloud.com/buhdan", "visible": true}
+      "youtube": {
+        "url": "http://www.youtube.com/@buhdan",
+        "visible": true
+      },
+      "twitter": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "",
+        "visible": false
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "soundcloud": {
+        "url": "https://soundcloud.com/buhdan",
+        "visible": true
+      }
     }
   },
-    {
+  {
     "channelId": "UCAV3WZWnCvL0l5DzF6ogc1w",
     "FullyForked": false,
     "name": "CatTips",
     "socials": {
-      "youtube": { "url": "http://www.youtube.com/@LinusCatTips", "visible": true },
-      "twitter": { "url": "", "visible": false },
-      "instagram": { "url": "", "visible": false },
-      "bluesky": { "url": "", "visible": false },
-      "soundcloud": {"url": "https://soundcloud.com/buhdan", "visible": false}
+      "youtube": {
+        "url": "http://www.youtube.com/@LinusCatTips",
+        "visible": true
+      },
+      "twitter": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "",
+        "visible": false
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "soundcloud": {
+        "url": "https://soundcloud.com/buhdan",
+        "visible": false
+      }
     }
+  },
+  {
+    "name": "",
+    "channelId": "",
+    "FullyForked": false
   }
-
 ]
-
-
