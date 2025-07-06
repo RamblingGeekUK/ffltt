@@ -44,7 +44,7 @@ jobs:
           SOCIALS=$(echo "$BODY" | grep -A1 'Socials' | tail -n1 | xargs)
 
           # Fallback if socials is empty or not valid JSON
-          if ! echo "$SOCIALS" | jq empty 2>/dev/null; then
+          if [ -z "$SOCIALS" ] || ! echo "$SOCIALS" | jq empty 2>/dev/null; then
             SOCIALS="{}"
           fi
 
