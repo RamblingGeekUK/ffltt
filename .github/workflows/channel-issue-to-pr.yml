@@ -4,14 +4,15 @@ on:
   issues:
     types: [labeled]
 
+permissions:
+  contents: write
+  issues: read
+  pull-requests: write
+
 jobs:
   update-channels-json:
     if: github.event.label.name == 'accepted'
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      issues: read
-      pull-requests: write
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
