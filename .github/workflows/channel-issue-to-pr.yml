@@ -74,7 +74,8 @@ jobs:
           NEW_ENTRY=$(jq -n --arg name "$CHANNEL_NAME" --arg channelId "$CHANNEL_ID" --argjson forked "$FULLY_FORKED" --slurpfile socials socials.json '{name: $name, channelId: $channelId, socials: $socials[0], FullyForked: ($forked == true or $forked == "true") }')
 
           # Append to channels.json (if not already present)
-          jq ". + [${NEW_ENTRY}]" data/channels.json > data/channels.json.new
+          echo "$NEW_ENTRY" > new_entry.json
+          jq '. + [input]' data/channels.json new_entry.json > data/channels.json.new
           mv data/channels.json.new data/channels.json
 
       - name: Commit and create PR
