@@ -38,10 +38,10 @@ jobs:
           gh issue view $ISSUE_NUMBER --json body > issue.json
           BODY=$(jq -r .body issue.json)
 
-          # Extract fields from the issue template
-          CHANNEL_NAME=$(echo "$BODY" | grep -A1 'Channel Name' | tail -n1 | xargs)
-          YOUTUBE_URL=$(echo "$BODY" | grep -A1 'YouTube URL' | tail -n1 | xargs)
-          FULLY_FORKED=$(echo "$BODY" | grep -A1 'Fully Forked' | tail -n1 | xargs)
+          # Extract fields from the issue template (robust, handles blank lines)
+          CHANNEL_NAME=$(awk '/^### Channel Name/{getline; while($0 ~ /^$/) getline; print; exit}' <<< "$BODY")
+          YOUTUBE_URL=$(awk '/^### YouTube URL/{getline; while($0 ~ /^$/) getline; print; exit}' <<< "$BODY")
+          FULLY_FORKED=$(awk '/^### Fully Forked\?/{getline; while($0 ~ /^$/) getline; print; exit}' <<< "$BODY")
 
           # Debug: Show parsed values
           echo "CHANNEL_NAME: $CHANNEL_NAME"
