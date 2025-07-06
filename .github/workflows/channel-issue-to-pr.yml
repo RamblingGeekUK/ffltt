@@ -32,6 +32,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          export GH_TOKEN="${{ secrets.GITHUB_TOKEN }}"
           ISSUE_NUMBER=${{ github.event.issue.number }}
           gh issue view $ISSUE_NUMBER --json body > issue.json
           BODY=$(jq -r .body issue.json)
