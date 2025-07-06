@@ -44,8 +44,10 @@ jobs:
           SOCIALS=$(echo "$BODY" | grep -A1 'Socials' | tail -n1 | xargs)
 
           # Fallback if socials is empty or not valid JSON
-          if [ -z "$SOCIALS" ] || ! echo "$SOCIALS" | jq empty 2>/dev/null; then
+          if [ -z "$SOCIALS" ]; then
             SOCIALS="{}"
+          else
+            echo "$SOCIALS" | jq empty 2>/dev/null || SOCIALS="{}"
           fi
 
           # Fallback if fully_forked is not valid JSON (should be true/false)
