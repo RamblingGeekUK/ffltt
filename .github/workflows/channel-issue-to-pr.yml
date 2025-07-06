@@ -47,8 +47,15 @@ jobs:
           if [ -z "$SOCIALS" ]; then
             SOCIALS="{}"
           else
-            echo "$SOCIALS" | jq empty 2>/dev/null || SOCIALS="{}"
+            echo "$SOCIALS" | jq empty 2>/dev/null
+            if [ $? -ne 0 ]; then
+              SOCIALS="{}"
+            fi
           fi
+          # Remove any newlines or carriage returns from socials
+          SOCIALS=$(echo "$SOCIALS" | tr -d '\r\n')
+          # Debug output
+          echo "Final SOCIALS: $SOCIALS"
 
           # Fallback if fully_forked is not valid JSON (should be true/false)
           if ! echo "$FULLY_FORKED" | jq empty 2>/dev/null; then
