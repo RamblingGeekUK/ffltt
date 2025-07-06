@@ -477,5 +477,32 @@
         "visible": false
       }
     }
+  },
+  {
+    "channelId": "UCC43rlliFy4vFFTVJWao0Hw",
+    "name": "Luke Lafreniere",
+    "FullyForked": false,
+    "socials": {
+      "twitter": {
+        "url": "https://x.com/luke_lafr",
+        "visible": true
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "",
+        "visible": false
+      },
+      "youtube": {
+        "url": "https://www.youtube.com/channel/UCC43rlliFy4vFFTVJWao0Hw",
+        "visible": true
+      }
+    }
   }
 ]
