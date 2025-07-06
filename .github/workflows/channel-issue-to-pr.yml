@@ -55,8 +55,8 @@ jobs:
           # Extract channelId from YouTube URL
           CHANNEL_ID=$(echo "$YOUTUBE_URL" | grep -oE 'channel/[^/]+$' | cut -d'/' -f2)
 
-          # Build new channel JSON entry (no socials)
-          NEW_ENTRY=$(jq -n --arg name "$CHANNEL_NAME" --arg channelId "$CHANNEL_ID" --argjson forked "$FULLY_FORKED" '{name: $name, channelId: $channelId, FullyForked: ($forked == true or $forked == "true") }')
+          # Build new channel JSON entry (no socials, robust forked handling)
+          NEW_ENTRY=$(jq -n --arg name "$CHANNEL_NAME" --arg channelId "$CHANNEL_ID" --arg forked "$FULLY_FORKED" '{name: $name, channelId: $channelId, FullyForked: ($forked == "true") }')
 
           # Append to channels.json (if not already present)
           echo "$NEW_ENTRY" > new_entry.json
