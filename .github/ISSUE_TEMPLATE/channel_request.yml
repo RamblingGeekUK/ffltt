@@ -27,7 +27,10 @@ body:
   - type: textarea
     id: socials
     attributes:
-      label: Socials (JSON)
-      description: Paste a JSON object for socials (see README for format)
+      label: Socials (JSON, optional)
+      description: |
+        Optionally provide social links as JSON. Example:
+        { "twitter": "https://twitter.com/example", "instagram": "https://instagram.com/example" }
+      placeholder: '{ "twitter": "https://twitter.com/example" }'
     validations:
       required: false
