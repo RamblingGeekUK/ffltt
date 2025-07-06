@@ -1,5 +1,27 @@
 {
-  "name": "Luke Lafreniere",
   "channelId": "UCC43rlliFy4vFFTVJWao0Hw",
-  "FullyForked": false
+  "name": "Luke Lafreniere",
+  "FullyForked": false,
+  "socials": {
+    "twitter": {
+      "url": "",
+      "visible": false
+    },
+    "website": {
+      "url": "",
+      "visible": true
+    },
+    "bluesky": {
+      "url": "",
+      "visible": false
+    },
+    "instagram": {
+      "url": "",
+      "visible": false
+    },
+    "youtube": {
+      "url": "https://www.youtube.com/channel/UCC43rlliFy4vFFTVJWao0Hw",
+      "visible": true
+    }
+  }
 }
