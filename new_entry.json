@@ -1,11 +1,11 @@
 {
-  "channelId": "UCC43rlliFy4vFFTVJWao0Hw",
-  "name": "Luke Lafreniere",
-  "FullyForked": false,
+  "channelId": "UCx_HOMKJL72cRUjlBtLZfYw",
+  "name": "SuopOnYoutube",
+  "FullyForked": true,
   "socials": {
     "twitter": {
-      "url": "https://x.com/luke_lafr",
-      "visible": true
+      "url": "",
+      "visible": false
     },
     "website": {
       "url": "",
@@ -16,11 +16,19 @@
       "visible": false
     },
     "instagram": {
-      "url": "",
-      "visible": false
+      "url": "https://www.instagram.com/suopstuff",
+      "visible": true
     },
     "youtube": {
-      "url": "https://www.youtube.com/channel/UCC43rlliFy4vFFTVJWao0Hw",
+      "url": "https://www.youtube.com/channel/UCx_HOMKJL72cRUjlBtLZfYw",
+      "visible": true
+    },
+    "etsy": {
+      "url": "https://www.etsy.com/ca/shop/SuopShop",
+      "visible": true
+    },
+    "twitch": {
+      "url": "https://www.twitch.tv/suopontwitch",
       "visible": true
     }
   }
