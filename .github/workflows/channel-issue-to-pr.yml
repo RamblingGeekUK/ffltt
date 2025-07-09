@@ -215,7 +215,7 @@ jobs:
           title: "Add/update channel from issue #${{ github.event.issue.number }}"
           body: "This PR was auto-generated from an accepted issue."
           branch: "auto/channel-update-${{ github.event.issue.number }}"
-          base: release
+          base: Release
 
       - name: Comment on issue
         run: gh issue comment ${{ github.event.issue.number }} --body "A pull request has been created to update channels.json!"
