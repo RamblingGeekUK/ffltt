@@ -1,11 +1,11 @@
 {
-  "channelId": "UCx_HOMKJL72cRUjlBtLZfYw",
-  "name": "SuopOnYoutube",
+  "channelId": "jakkuh_t",
+  "name": "jakkuh",
   "FullyForked": true,
   "socials": {
     "twitter": {
-      "url": "",
-      "visible": false
+      "url": "https://twitter.com/jakkuh_t",
+      "visible": true
     },
     "website": {
       "url": "",
@@ -16,19 +16,11 @@
       "visible": false
     },
     "instagram": {
-      "url": "https://www.instagram.com/suopstuff",
+      "url": "https://instagram.com/jakkuh_t",
       "visible": true
     },
     "youtube": {
-      "url": "https://www.youtube.com/channel/UCx_HOMKJL72cRUjlBtLZfYw",
-      "visible": true
-    },
-    "etsy": {
-      "url": "https://www.etsy.com/ca/shop/SuopShop",
-      "visible": true
-    },
-    "twitch": {
-      "url": "https://www.twitch.tv/suopontwitch",
+      "url": "https://www.youtube.com/@jakkuh_t",
       "visible": true
     }
   }
