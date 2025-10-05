@@ -1,6 +1,6 @@
 {
-  "channelId": "jakkuh_t",
-  "name": "jakkuh",
+  "channelId": "jakegarage",
+  "name": "Jake's Garage",
   "FullyForked": true,
   "socials": {
     "twitter": {
@@ -16,11 +16,11 @@
       "visible": false
     },
     "instagram": {
-      "url": "https://instagram.com/jakkuh_t",
+      "url": "https://instagram.com/jakegarage",
       "visible": true
     },
     "youtube": {
-      "url": "https://www.youtube.com/@jakkuh_t",
+      "url": "https://www.youtube.com/@jakegarage",
       "visible": true
     }
   }

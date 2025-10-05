@@ -574,5 +574,32 @@
         "visible": true
       }
     }
+  },
+  {
+    "channelId": "jakegarage",
+    "name": "Jake's Garage",
+    "FullyForked": true,
+    "socials": {
+      "twitter": {
+        "url": "https://twitter.com/jakkuh_t",
+        "visible": true
+      },
+      "website": {
+        "url": "",
+        "visible": true
+      },
+      "bluesky": {
+        "url": "",
+        "visible": false
+      },
+      "instagram": {
+        "url": "https://instagram.com/jakegarage",
+        "visible": true
+      },
+      "youtube": {
+        "url": "https://www.youtube.com/@jakegarage",
+        "visible": true
+      }
+    }
   }
 ]
